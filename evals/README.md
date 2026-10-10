@@ -12,6 +12,7 @@ Behaviour tests for the skills, run with `claude plugin eval`. Each case runs a 
 | `define-icp-write-early` | `define-icp` told to write before the interview is done marks open fields `(unconfirmed)` and lists the Open questions, leaving every other section unchanged |
 | `value-prop-no-icp` | `value-prop` with the ICP still a placeholder names `define-icp` and writes nothing |
 | `value-prop-owns-only-value-prop` | `value-prop` fills the Value proposition section with its alternatives and measure, and moves its date, leaving every other section and its date unchanged |
+| `value-prop-waits-for-confirmation` | `value-prop` given every answer but no instruction to write shows its draft and leaves the Value proposition section untouched until the Founder confirms |
 | `outcome-positioning-no-value-prop` | `outcome-positioning` with the Value proposition still a placeholder names `value-prop` and writes nothing |
 | `outcome-positioning-owns-only-outcome-positioning` | `outcome-positioning` fills the Outcome positioning section with its outcome, the work to show, its context and harness, and its integrations, and moves its date, leaving every other section and its date unchanged |
 | `outcome-positioning-rejects-productivity` | `outcome-positioning` given a time-saved framing writes a growth or risk reduction outcome, not productivity |

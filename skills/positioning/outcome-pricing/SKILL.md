@@ -77,6 +77,8 @@ In the interview below, "the user" is the Founder, and you only ask what is stil
 
 Give every question 2 to 4 lettered options drafted from what you found in step 2, mark the one you recommend, and tell the Founder they can answer with something else.
 
+Hold each answer to its branch's **done when** test before you count the branch as settled. An answer that fails the test settles nothing: say why in the next round and ask again with a sharper recommendation, instead of accepting it or offering a weaker claim as one of the options. Never show a draft of the section while the interview is running, and never park a branch whose test is unmet as an Open question: Open questions are only for when the Founder says to write now.
+
 The design tree for this skill grows from the root branches below. Each has a **done when** test: keep drilling into the decisions under a branch, round after round, until its test is met. The sub-decisions listed are where to start, not the whole tree; there is no limit on rounds. When revising, the Pricing section's Open questions and any field it lacks are open branches: ask them in the first round (see [STATE.md](../../meta/setup-gtm/STATE.md)).
 
 - **Unit of usage**: the one outcome the product charges for, counted as the customer sees it. Done when a customer could count it from their own records, and you know what does not count (a failed or redone unit). Start from: the outcome, how it is counted, and what is excluded. Recommend the unit the Outcome positioning's work points to. If the Founder offers tokens or API calls, say they are a cost to the Founder, not an outcome the customer sees, and recommend the outcome they stand for.
@@ -91,7 +93,7 @@ If the Founder says to write now, or told you to take their answers as final, st
 
 ### 4. Confirm, then write
 
-Show the Founder the Pricing section you are about to write, and, when revising, say what changes. Write once they confirm, or straight away if they already told you to write without confirming. A Founder's instruction to write without confirming does not waive the tests above: if their price is per seat, say so in your reply and write the platform fee, included usage, and overage it turns into, keeping the per-seat figure out of the field values.
+Once the frontier is empty, or the Founder said to write now, show the Founder the Pricing section you are about to write, in a message that asks nothing else, and, when revising, say what changes. Write only once they confirm that draft, or straight away if they already told you to write without confirming. An answer to an interview question is never a confirmation, even one given beside a draft. A Founder's instruction to write without confirming does not waive the tests above: if their price is per seat, say so in your reply and write the platform fee, included usage, and overage it turns into, keeping the per-seat figure out of the field values.
 
 Replace the body of the Pricing section only, in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives, and set its `Last revised` to today. Leave every other section exactly as it is, byte for byte, including its date. Never write any other file.
 
