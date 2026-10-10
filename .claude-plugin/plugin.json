@@ -17,6 +17,7 @@
   ],
   "skills": [
     "./skills/meta/setup-gtm",
-    "./skills/positioning/define-icp"
+    "./skills/positioning/define-icp",
+    "./skills/positioning/value-prop"
   ]
 }

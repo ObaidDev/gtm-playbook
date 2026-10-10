@@ -22,7 +22,7 @@ Look at the Workspace before asking anything. Finding facts is your job, never t
 
 ### 2. Interview in rounds
 
-The interview below is copied from Matt Pocock's grilling skill (see [NOTICE.md](./NOTICE.md)). Here, "the user" is the Founder, and you only ask what is still open after step 1.
+In the interview below, "the user" is the Founder, and you only ask what is still open after step 1.
 
 > Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 >

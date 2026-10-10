@@ -83,3 +83,13 @@ When its owner fills a section in, the heading, `Owner:` line, and `Last revised
 
   **Platform:** <Meta | LinkedIn | X | another, the one social platform this ICP spends time on>
   ```
+
+- **Value proposition** (value-prop):
+
+  ```markdown
+  **Value proposition:** <one sentence: how the product is ten times better than the alternatives at solving the ICP's problem>
+
+  **Alternatives:** <what the ICP uses today instead>
+
+  **Measure:** <the one measure on which the product is ten times better than those alternatives>
+  ```

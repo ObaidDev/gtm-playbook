@@ -27,7 +27,11 @@ _Not defined yet. Run `/gtm-playbook:define-icp`._
 Owner: value-prop
 Last revised: 2026-02-12
 
-Shiplog writes your customer changelog from merged PRs in seconds, so product teams stop losing a day a week to release notes.
+**Value proposition:** Shiplog writes your customer changelog from merged PRs in seconds, so product teams stop losing a day a week to release notes.
+
+**Alternatives:** Writing release notes by hand.
+
+**Measure:** Time to publish the changelog: seconds instead of a day a week.
 
 ## Outcome positioning
 

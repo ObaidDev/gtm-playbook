@@ -34,7 +34,7 @@ graders:
   - name: value-proposition-unchanged
     type: regex
     target: { source: file, path: gtm/profile.md }
-    pattern: '## Value proposition\s+Owner: value-prop\s+Last revised: 2026-02-12\s+Shiplog writes your customer changelog from merged PRs in seconds, so product teams stop losing a day a week to release notes\.\s+## Outcome positioning'
+    pattern: '## Value proposition\s+Owner: value-prop\s+Last revised: 2026-02-12\s+\*\*Value proposition:\*\* Shiplog writes your customer changelog from merged PRs in seconds, so product teams stop losing a day a week to release notes\.\s+\*\*Alternatives:\*\* Writing release notes by hand\.\s+\*\*Measure:\*\* Time to publish the changelog: seconds instead of a day a week\.\s+## Outcome positioning'
   - name: outcome-positioning-unchanged
     type: regex
     target: { source: file, path: gtm/profile.md }

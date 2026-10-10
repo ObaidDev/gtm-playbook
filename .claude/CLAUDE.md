@@ -14,9 +14,9 @@ Workflow and meta skills are user-invoked (`disable-model-invocation: true`, wit
 
 Skills use the vocabulary in `CONTEXT.md` (Profile, Artifact, Campaign, ICP, Lead stage, and so on) and avoid the synonyms it lists. The `gtm/` state folder contract, including the Profile format and section owners, is defined in `skills/meta/setup-gtm/STATE.md`; a skill that adds or changes an owned Profile section updates that file too.
 
-Every `SKILL.md` distilled from a Source ends with a one-line credit naming the creator and the Source title. Sources stay in the gitignored `sources/` folder and are never committed or quoted verbatim; skills paraphrase and drop all promotional content (ADR-0001).
+A `SKILL.md` carries no credit line for its Sources. Sources stay in the gitignored `sources/` folder and are never committed or quoted verbatim; skills paraphrase and drop all promotional content (ADR-0001).
 
-Skills are self-contained: never assume another plugin (such as `mattpocock-skills`) is installed, and never tell the agent to call a skill outside this plugin. When a skill needs another skill's pattern, copy its text verbatim into the skill (quoted, not paraphrased), and add a `NOTICE.md` beside the `SKILL.md` carrying the original's link and license notice. That `NOTICE.md` is the credit; no extra credit line is needed. This applies to the interview loop in every workflow skill: copy it, with its `NOTICE.md`, from `skills/meta/setup-gtm/`.
+Skills are self-contained: never assume another plugin (such as `mattpocock-skills`) is installed, and never tell the agent to call a skill outside this plugin. When a skill needs another skill's pattern, copy its text verbatim into the skill (quoted, not paraphrased), and add a `NOTICE.md` beside the `SKILL.md` carrying the original's link and license notice. That `NOTICE.md` is the credit: the `SKILL.md` itself never names, links, or points to the skill it borrowed from, nor to its `NOTICE.md`. This applies to the interview loop in every workflow skill: copy it, with its `NOTICE.md`, from `skills/meta/setup-gtm/`.
 
 No em-dashes in this repo's prose. Rewrite the sentence with a comma, colon, period, or parentheses instead.
 
