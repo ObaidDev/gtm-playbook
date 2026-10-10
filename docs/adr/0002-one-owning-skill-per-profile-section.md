@@ -1,0 +1,3 @@
+# Each Profile section has exactly one owning skill
+
+Every section of a founder's Profile (ICP, value proposition, pricing, and so on) is written by exactly one skill; every other skill only reads it. When evidence contradicts a section (for example `log-conversation` hearing objections that undercut the ICP), the skill records the evidence and tells the founder to run the owning skill, which reads that evidence when revising. We chose this over letting any skill edit any section because a single writer keeps each section coherent, keeps the "Last revised" date meaningful for staleness checks, and keeps the founder deciding when their positioning changes.
