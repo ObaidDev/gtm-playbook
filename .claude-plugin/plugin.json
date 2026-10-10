@@ -16,6 +16,7 @@
     "skills"
   ],
   "skills": [
-    "./skills/meta/setup-gtm"
+    "./skills/meta/setup-gtm",
+    "./skills/positioning/define-icp"
   ]
 }

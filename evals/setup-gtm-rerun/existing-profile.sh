@@ -20,7 +20,11 @@ Last revised: 2026-01-05
 Owner: define-icp
 Last revised: 2026-02-10
 
-Heads of product at 20 to 200 person B2B SaaS companies who ship weekly and get churn tickets asking "what changed?". Platform: LinkedIn.
+**Who:** Heads of product at 20 to 200 person B2B SaaS companies who ship weekly.
+
+**Urgent and important problem:** Customers churn because they never hear what changed.
+
+**Platform:** LinkedIn
 
 ## Value proposition
 

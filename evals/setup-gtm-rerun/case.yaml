@@ -29,7 +29,7 @@ graders:
   - name: icp-preserved-with-its-date
     type: regex
     target: { source: file, path: gtm/profile.md }
-    pattern: '## ICP\s+Owner: define-icp\s+Last revised: 2026-02-10\s+Heads of product at 20 to 200 person B2B SaaS companies who ship weekly and get churn tickets asking "what changed\?"\. Platform: LinkedIn\.'
+    pattern: '## ICP\s+Owner: define-icp\s+Last revised: 2026-02-10\s+\*\*Who:\*\* Heads of product at 20 to 200 person B2B SaaS companies who ship weekly\.\s+\*\*Urgent and important problem:\*\* Customers churn because they never hear what changed\.\s+\*\*Platform:\*\* LinkedIn'
   - name: value-proposition-preserved-with-its-date
     type: regex
     target: { source: file, path: gtm/profile.md }

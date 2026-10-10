@@ -7,6 +7,8 @@ Behaviour tests for the skills, run with `claude plugin eval`. Each case runs a 
 | `setup-gtm-empty-workspace` | `setup-gtm` creates the Profile with the product, the Product stage, and an empty dated section per owning skill |
 | `setup-gtm-rerun` | Re-running `setup-gtm` updates the Product section, keeps every other section and its date, and adds missing sections |
 | `setup-gtm-not-model-invoked` | Asking for setup in plain words never fires `setup-gtm` (only meaningful in the plugin arm; the no-plugin arm passes trivially) |
+| `define-icp-no-profile` | `define-icp` with no Profile names `setup-gtm` and writes nothing |
+| `define-icp-owns-only-icp` | `define-icp` fills the ICP section with its platform and moves its date, leaving every other section and its date unchanged |
 
 ## Running
 

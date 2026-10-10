@@ -1,0 +1,32 @@
+schema_version: "1.1"
+name: define-icp-no-profile
+description: define-icp with no Profile stops, names setup-gtm, and leaves the Workspace unchanged.
+tags: [define-icp]
+runs: 1
+context:
+  scaffold_script: workspace-without-profile.sh
+execution:
+  max_turns: 10
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:define-icp
+
+    Our ICP is heads of product at 20 to 200 person B2B SaaS companies who ship weekly and keep getting churn tickets asking "what changed?". They spend their time on LinkedIn. Take my answers as final and write the ICP without asking me to confirm.
+graders:
+  - name: names-setup-gtm
+    type: regex
+    pattern: 'setup-gtm'
+  - name: no-gtm-state-created
+    type: file_exists
+    path: 'gtm/**'
+    exists: false
+  - name: nothing-written
+    type: tool_used
+    tool: Write
+    min: 0
+    max: 0
+  - name: nothing-edited
+    type: tool_used
+    tool: Edit
+    min: 0
+    max: 0

@@ -16,7 +16,14 @@ gtm/
 
 One section per owning skill. Each section has exactly one owner (ADR-0002); every other skill only reads it. Every section carries a `Last revised:` line with an ISO date (`YYYY-MM-DD`), which staleness checks compare against the Profile date an Artifact records.
 
-An empty section holds a single placeholder line, starting `_Not defined yet.`, naming the skill that fills it. A skill that needs a section still holding its placeholder stops and tells the Founder to run that skill.
+An empty section holds a single placeholder line, starting `_Not defined yet.`, naming the skill that fills it.
+
+### Missing prerequisites
+
+A skill never guesses state it depends on. When what it needs is missing, it stops before interviewing, names the skill to run first, and writes nothing (no file, no folder):
+
+- **No Profile** (`gtm/profile.md` does not exist): run `/gtm-playbook:setup-gtm`.
+- **A needed section still holds its placeholder**: run the skill the placeholder names.
 
 ### Template
 
@@ -62,3 +69,17 @@ Last revised: <today>
 
 _Not defined yet. Run `/gtm-playbook:outcome-pricing`._
 ```
+
+### Filled sections
+
+When its owner fills a section in, the heading, `Owner:` line, and `Last revised:` line stay as above, and the placeholder is replaced by the owner's body:
+
+- **ICP** (define-icp):
+
+  ```markdown
+  **Who:** <the role and kind of company that has the problem>
+
+  **Urgent and important problem:** <the problem the product solves for them, and why it is urgent and important now>
+
+  **Platform:** <Meta | LinkedIn | X | another, the one social platform this ICP spends time on>
+  ```
