@@ -1,0 +1,26 @@
+schema_version: "1.1"
+name: outcome-positioning-rejects-productivity
+description: outcome-positioning given a productivity framing writes a growth or risk reduction outcome instead of time saved.
+tags: [outcome-positioning]
+runs: 1
+context:
+  scaffold_script: existing-profile.sh
+execution:
+  max_turns: 15
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:outcome-positioning
+
+    Our outcome is productivity: Shiplog saves the head of product eight hours a week. Our demo shows a finished changelog email landing in a customer's inbox minutes after a merge. Pasting PRs into a general model fails because Shiplog reads the linked tickets, the customer list, and past changelogs, and checks every entry against what actually merged. It integrates with GitHub and Linear, exposes an MCP server, and hands each draft to the head of product to approve in Slack. Take my answers as final and write it without asking me to confirm.
+graders:
+  - name: outcome-is-growth-or-risk-reduction
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: \d{4}-\d{2}-\d{2}\s+\*\*Outcome:\*\* (Growth|Risk reduction)'
+    flags: i
+  - name: outcome-not-productivity
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '\*\*Outcome:\*\*[^\n]*productiv'
+    flags: i
+    match: not_contains

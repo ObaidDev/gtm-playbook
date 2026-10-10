@@ -38,7 +38,13 @@ _Not defined yet. Run `/gtm-playbook:value-prop`._
 Owner: outcome-positioning
 Last revised: 2026-03-02
 
-Shiplog reduces churn risk by telling every customer what changed, the day it ships.
+**Outcome:** Risk reduction: less churn, because every customer hears what changed the day it ships.
+
+**Show the work:** A finished changelog email landing in a customer's inbox minutes after a merge.
+
+**Context and harness:** Reads the linked tickets and past changelogs, and checks every entry against what merged.
+
+**Integrations:** GitHub, Linear, an MCP server, and a Slack approval by the head of product.
 
 ## Pricing
 

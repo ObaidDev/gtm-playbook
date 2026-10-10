@@ -8,6 +8,7 @@ Reachable only when you type them (`disable-model-invocation: true`).
 
 - **[define-icp](./define-icp/SKILL.md)**: Define your ICP (who has the urgent and important problem your product solves) and the one social platform they spend time on. Run after `setup-gtm`, and again when Customer conversations say your ICP is wrong.
 - **[value-prop](./value-prop/SKILL.md)**: Write your one-sentence Value proposition: how your product is ten times better than the alternatives at solving your ICP's problem, challenging any claim that is not. Run after `define-icp`, and again when the ICP changes or Customer conversations say the claim is not landing.
+- **[outcome-positioning](./outcome-positioning/SKILL.md)**: Sell growth or risk reduction instead of productivity, and decide what to show instead of workflows and features: the work getting done, the context and harness that beat a general model, and your integrations (including MCP and human handoffs). Run after `value-prop`, and again when the Value proposition changes or Customer conversations ask what the ROI is.
 
 ## Model-invoked
 

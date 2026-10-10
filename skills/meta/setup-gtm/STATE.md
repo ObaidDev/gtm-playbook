@@ -93,3 +93,15 @@ When its owner fills a section in, the heading, `Owner:` line, and `Last revised
 
   **Measure:** <the one measure on which the product is ten times better than those alternatives>
   ```
+
+- **Outcome positioning** (outcome-positioning):
+
+  ```markdown
+  **Outcome:** <growth | risk reduction>: <the one result on the ICP's business that the Value proposition's gain leads to>
+
+  **Show the work:** <the work getting done that a demo or page shows, instead of workflows and features>
+
+  **Context and harness:** <the data, context, and harness that make the product ten times better than the ICP using a general model, or `Not AI-native.` and what it has that the alternatives lack>
+
+  **Integrations:** <MCP, APIs into the systems the ICP runs, and handoffs to and from the humans alongside it>
+  ```

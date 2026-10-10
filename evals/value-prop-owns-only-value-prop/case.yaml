@@ -34,7 +34,7 @@ graders:
   - name: outcome-positioning-unchanged
     type: regex
     target: { source: file, path: gtm/profile.md }
-    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: 2026-03-02\s+Shiplog reduces churn risk by telling every customer what changed, the day it ships\.\s+## Pricing'
+    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: 2026-03-02\s+\*\*Outcome:\*\* Risk reduction: less churn, because every customer hears what changed the day it ships\.\s+\*\*Show the work:\*\* A finished changelog email landing in a customer''s inbox minutes after a merge\.\s+\*\*Context and harness:\*\* Reads the linked tickets and past changelogs, and checks every entry against what merged\.\s+\*\*Integrations:\*\* GitHub, Linear, an MCP server, and a Slack approval by the head of product\.\s+## Pricing'
   - name: pricing-unchanged
     type: regex
     target: { source: file, path: gtm/profile.md }

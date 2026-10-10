@@ -1,0 +1,47 @@
+schema_version: "1.1"
+name: outcome-positioning-owns-only-outcome-positioning
+description: outcome-positioning writes the Outcome positioning section and moves its date, and leaves every other Profile section and its date unchanged.
+tags: [outcome-positioning]
+runs: 1
+context:
+  scaffold_script: existing-profile.sh
+execution:
+  max_turns: 15
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:outcome-positioning
+
+    We sell risk reduction: customers who never hear what changed churn, and Shiplog tells every customer what shipped the day it ships. Our demo shows a finished changelog email landing in a customer's inbox minutes after a merge, not the settings screens. Pasting PRs into a general model fails because Shiplog reads the linked tickets, the customer list, and past changelogs, and checks every entry against what actually merged. It integrates with GitHub and Linear, exposes an MCP server, and hands each draft to the head of product to approve in Slack. Take my answers as final and write it without asking me to confirm.
+graders:
+  - name: outcome-positioning-filled
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: \d{4}-\d{2}-\d{2}\s+\*\*Outcome:\*\* Risk reduction[^#]*\*\*Show the work:\*\*[^#]*\*\*Context and harness:\*\*[^#]*\*\*Integrations:\*\*[^#]*MCP[^#]*## Pricing'
+    flags: i
+  - name: outcome-positioning-date-moved-on
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: 2026-01-05'
+    match: not_contains
+  - name: product-unchanged
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Product\s+Owner: setup-gtm\s+Last revised: 2026-01-05\s+\*\*Product:\*\* Shiplog uses AI to turn merged pull requests into customer-facing changelogs for B2B SaaS teams\.\s+\*\*Product stage:\*\* beta\s+## ICP'
+  - name: icp-unchanged
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## ICP\s+Owner: define-icp\s+Last revised: 2026-01-20\s+\*\*Who:\*\* Heads of product at 20 to 200 person B2B SaaS companies who ship weekly\.\s+\*\*Urgent and important problem:\*\* Customers churn because they never hear what changed, and writing release notes by hand eats a day a week\.\s+\*\*Platform:\*\* LinkedIn\s+## Value proposition'
+  - name: value-proposition-unchanged
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Value proposition\s+Owner: value-prop\s+Last revised: 2026-02-12\s+\*\*Value proposition:\*\* Shiplog writes your customer changelog from merged PRs in a minute instead of a day, so product teams tell every customer what changed without losing a day a week\.\s+\*\*Alternatives:\*\* Writing release notes by hand from Jira tickets\.\s+\*\*Measure:\*\* Time to publish the changelog: a minute instead of a day a week\.\s+## Outcome positioning'
+  - name: pricing-unchanged
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Pricing\s+Owner: outcome-pricing\s+Last revised: 2026-01-05\s+_Not defined yet\. Run `/gtm-playbook:outcome-pricing`\._\s*$'
+  - name: no-duplicated-sections
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '^## Outcome positioning\s*$'
+    flags: m
+    match: count:1

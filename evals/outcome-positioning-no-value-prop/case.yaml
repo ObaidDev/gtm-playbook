@@ -1,0 +1,32 @@
+schema_version: "1.1"
+name: outcome-positioning-no-value-prop
+description: outcome-positioning with the Value proposition still a placeholder stops, names value-prop, and leaves the Profile unchanged.
+tags: [outcome-positioning]
+runs: 1
+context:
+  scaffold_script: profile-without-value-prop.sh
+execution:
+  max_turns: 10
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:outcome-positioning
+
+    We sell risk reduction: Shiplog cuts churn by telling every customer what changed the day it ships. Take my answers as final and write it without asking me to confirm.
+graders:
+  - name: names-value-prop
+    type: regex
+    pattern: 'value-prop'
+  - name: outcome-positioning-still-empty
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: 2026-01-05\s+_Not defined yet\. Run `/gtm-playbook:outcome-positioning`\._\s+## Pricing'
+  - name: nothing-written
+    type: tool_used
+    tool: Write
+    min: 0
+    max: 0
+  - name: nothing-edited
+    type: tool_used
+    tool: Edit
+    min: 0
+    max: 0
