@@ -22,15 +22,35 @@ Look at the Workspace before asking anything. Finding facts is your job, never t
 
 ### 2. Interview in rounds
 
-Ask only what is still open, in rounds. Each round asks every question whose prerequisites are settled. Number each question and lead with your recommended answer, so the Founder can accept it in a word. Then wait for their answers before the next round.
+The interview below is copied from Matt Pocock's grilling skill (see [NOTICE.md](./NOTICE.md)). Here, "the user" is the Founder, and you only ask what is still open after step 1.
 
-```
-❓ **Q1** - **<question title>**: <question body, with the choices if there are any>
+> Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
+>
+> Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round.
+>
+> Format a round like so:
+>
+> ```
+> ❓ **Q1** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices>
+>
+> ➡️ <your recommended answer>
+>
+> ---
+>
+> ❓ **Q2** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices>
+>
+> ➡️ <your recommended answer>
+> ```
+>
+> Word each question so "yes" accepts your recommended answer.
+>
+> Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
+>
+> Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yourself. Don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait.
+>
+> The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
 
-➡️ <your recommended answer>
-```
-
-The questions:
+The design tree for this skill holds only these questions:
 
 - **Product**: what the product does and for whom, in one or two sentences. Recommend a sentence drafted from what you found in the Workspace (or, on a re-run, the current one).
 - **Product stage**: one of `pre-product` (nothing a customer can use yet), `beta` (people can use it, nobody pays yet), or `revenue` (at least one paying customer). Recommend the stage the evidence points to; on a re-run, recommend the current stage unless the Founder said it changed.

@@ -16,7 +16,7 @@ Skills use the vocabulary in `CONTEXT.md` (Profile, Artifact, Campaign, ICP, Lea
 
 Every `SKILL.md` ends with a one-line credit: the creator and Source title for a skill distilled from a Source, or the creator and work for a skill built on someone else's pattern (such as the interview loop, credited to Matt Pocock's grilling skill). Link that credit to the original so a Founder can find it.
 
-Skills are self-contained: never assume another plugin (such as `mattpocock-skills`) is installed, and never tell the agent to call a skill outside this plugin. Embed the pattern in the skill itself; the credit line is attribution, not a dependency. Sources stay in the gitignored `sources/` folder and are never committed or quoted verbatim; skills paraphrase and drop all promotional content (ADR-0001).
+Skills are self-contained: never assume another plugin (such as `mattpocock-skills`) is installed, and never tell the agent to call a skill outside this plugin. When a skill needs another skill's pattern, copy its text verbatim into the skill (quoted, not paraphrased), and add a `NOTICE.md` beside the `SKILL.md` carrying the original's link and license notice. The credit line is attribution, not a dependency. This applies to the interview loop in every workflow skill: copy it from `skills/meta/setup-gtm/SKILL.md`, step 2. Sources stay in the gitignored `sources/` folder and are never committed or quoted verbatim; skills paraphrase and drop all promotional content (ADR-0001).
 
 No em-dashes in this repo's prose. Rewrite the sentence with a comma, colon, period, or parentheses instead.
 
