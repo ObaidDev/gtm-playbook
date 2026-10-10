@@ -2,7 +2,24 @@
 
 Stateful go-to-market skills for Claude Code, distilled from material I have learned from. Instead of generic advice, the skills keep your GTM work in your Workspace (a Profile, Campaigns, Customer conversations, an Experiment log) and build on it every time you run them.
 
-> **Status:** in design. The skills below are planned; each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
+> **Status:** early. `setup-gtm` ships today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
+
+## Install
+
+In Claude Code (2.1.275 or later):
+
+```
+/plugin install gtm-playbook --marketplace ObaidDev/gtm-playbook
+```
+
+On older versions, add the marketplace first, then install:
+
+```
+/plugin marketplace add ObaidDev/gtm-playbook
+/plugin install gtm-playbook@obaiddev
+```
+
+Then open the folder you want to use as your Workspace (one per product) and run `/gtm-playbook:setup-gtm`. All state is kept in a `gtm/` folder there.
 
 ## Flows
 
@@ -16,7 +33,7 @@ setup-gtm → define-icp → value-prop → outcome-positioning → outcome-pric
 
 | Step | Skill | What you end up with |
 |---|---|---|
-| 1 | `setup-gtm` ([#2](https://github.com/ObaidDev/gtm-playbook/issues/2)) | A Profile with your product and Product stage |
+| 1 | [`setup-gtm`](./skills/meta/setup-gtm/SKILL.md) | A Profile with your product and Product stage |
 | 2 | `define-icp` ([#3](https://github.com/ObaidDev/gtm-playbook/issues/3)) | Who has the urgent, important problem, and which platform they spend time on |
 | 3 | `value-prop` ([#4](https://github.com/ObaidDev/gtm-playbook/issues/4)) | A one-sentence, ten-times-better Value proposition |
 | 4 | `outcome-positioning` ([#12](https://github.com/ObaidDev/gtm-playbook/issues/12)) | Growth or risk-reduction framing; show the work, context, integrations |

@@ -1,0 +1,22 @@
+{
+  "name": "obaiddev",
+  "owner": {
+    "name": "ObaidDev",
+    "url": "https://github.com/ObaidDev"
+  },
+  "description": "ObaidDev's Claude Code plugins.",
+  "plugins": [
+    {
+      "name": "gtm-playbook",
+      "source": "./",
+      "description": "Stateful go-to-market skills for founders, distilled from Sources and kept in your Workspace.",
+      "category": "productivity",
+      "keywords": [
+        "gtm",
+        "go-to-market",
+        "founders",
+        "marketing"
+      ]
+    }
+  ]
+}

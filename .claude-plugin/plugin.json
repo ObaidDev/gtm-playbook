@@ -1,0 +1,21 @@
+{
+  "name": "gtm-playbook",
+  "version": "0.1.0",
+  "description": "Stateful go-to-market skills for founders: a Profile, Campaigns, Customer conversations, and an Experiment log kept in your Workspace and built on every run.",
+  "author": {
+    "name": "ObaidDev",
+    "url": "https://github.com/ObaidDev"
+  },
+  "homepage": "https://github.com/ObaidDev/gtm-playbook",
+  "repository": "https://github.com/ObaidDev/gtm-playbook",
+  "keywords": [
+    "gtm",
+    "go-to-market",
+    "founders",
+    "marketing",
+    "skills"
+  ],
+  "skills": [
+    "./skills/meta/setup-gtm"
+  ]
+}

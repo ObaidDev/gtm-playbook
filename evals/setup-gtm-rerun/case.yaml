@@ -1,0 +1,50 @@
+schema_version: "1.1"
+name: setup-gtm-rerun
+description: Re-running setup-gtm on an existing Profile updates the Product section, preserves every other section and its date, and adds owned sections that are missing.
+tags: [setup-gtm]
+runs: 1
+context:
+  scaffold_script: existing-profile.sh
+execution:
+  max_turns: 15
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:setup-gtm
+
+    The product description is still right. What changed: we now have a beta, a few teams use it for free, nobody pays yet. Take my answers as final and update the Profile without asking me to confirm.
+graders:
+  - name: product-stage-updated
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '\*\*Product stage:\*\*\s*beta\b'
+  - name: product-description-kept
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: 'Shiplog turns merged pull requests into customer-facing changelogs for B2B SaaS teams\.'
+  - name: product-date-moved-on
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Product\s+Owner: setup-gtm\s+Last revised: 2026-01-05'
+    match: not_contains
+  - name: icp-preserved-with-its-date
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## ICP\s+Owner: define-icp\s+Last revised: 2026-02-10\s+Heads of product at 20 to 200 person B2B SaaS companies who ship weekly and get churn tickets asking "what changed\?"\. Platform: LinkedIn\.'
+  - name: value-proposition-preserved-with-its-date
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Value proposition\s+Owner: value-prop\s+Last revised: 2026-02-12\s+Shiplog writes your customer changelog from merged PRs in seconds, so product teams stop losing a day a week to release notes\.'
+  - name: empty-section-keeps-its-date
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: 2026-01-05\s+_Not defined yet'
+  - name: missing-pricing-section-added
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Pricing\s+Owner: outcome-pricing\s+Last revised: \d{4}-\d{2}-\d{2}\s+_Not defined yet'
+  - name: no-duplicated-sections
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '^## ICP\s*$'
+    flags: m
+    match: count:1

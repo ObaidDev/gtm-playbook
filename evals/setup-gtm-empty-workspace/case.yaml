@@ -1,0 +1,41 @@
+schema_version: "1.1"
+name: setup-gtm-empty-workspace
+description: setup-gtm on an empty Workspace creates the Profile with product, Product stage, and an empty dated section per owning skill.
+tags: [setup-gtm]
+runs: 1
+execution:
+  max_turns: 15
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:setup-gtm
+
+    My product is Shiplog, a tool that turns merged pull requests into customer-facing changelogs for B2B SaaS teams. We have a beta with a few teams using it for free, nobody pays yet. Take my answers as final and write the Profile without asking me to confirm.
+graders:
+  - name: profile-created
+    type: file_exists
+    path: gtm/profile.md
+  - name: product-described
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Product\s+Owner: setup-gtm\s+Last revised: \d{4}-\d{2}-\d{2}\s+\*\*Product:\*\*[^\n]*changelog'
+    flags: i
+  - name: product-stage-beta
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '\*\*Product stage:\*\*\s*beta\b'
+  - name: icp-section-empty-and-dated
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## ICP\s+Owner: define-icp\s+Last revised: \d{4}-\d{2}-\d{2}\s+_Not defined yet'
+  - name: value-proposition-section-empty-and-dated
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Value proposition\s+Owner: value-prop\s+Last revised: \d{4}-\d{2}-\d{2}\s+_Not defined yet'
+  - name: outcome-positioning-section-empty-and-dated
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Outcome positioning\s+Owner: outcome-positioning\s+Last revised: \d{4}-\d{2}-\d{2}\s+_Not defined yet'
+  - name: pricing-section-empty-and-dated
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Pricing\s+Owner: outcome-pricing\s+Last revised: \d{4}-\d{2}-\d{2}\s+_Not defined yet'

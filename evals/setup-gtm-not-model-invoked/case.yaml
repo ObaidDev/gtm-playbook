@@ -1,0 +1,18 @@
+schema_version: "1.1"
+name: setup-gtm-not-model-invoked
+description: setup-gtm is user-invoked only, so asking for it in plain words never fires the skill.
+tags: [setup-gtm]
+runs: 1
+execution:
+  max_turns: 10
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    I want to start doing go-to-market for my product. Can you set up my GTM profile? It's Shiplog, a changelog generator for B2B SaaS teams, in beta.
+graders:
+  - name: skill-not-fired
+    type: tool_used
+    tool: Skill
+    input_match: '"skill"\s*:\s*"(?:[\w-]+:)?setup-gtm"'
+    min: 0
+    max: 0
+    arm: both
