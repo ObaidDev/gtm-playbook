@@ -1,0 +1,19 @@
+schema_version: "1.1"
+name: value-prop-waits-for-confirmation
+description: value-prop given every answer but no instruction to write shows its draft and writes nothing until the Founder confirms it.
+tags: [value-prop]
+runs: 1
+context:
+  scaffold_script: existing-profile.sh
+execution:
+  max_turns: 15
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:value-prop
+
+    Today our ICP writes release notes by hand from Jira tickets, which takes a full day every week. Shiplog drafts the customer changelog from merged pull requests in under a minute, and the head of product only reviews it. Our Value proposition: Shiplog writes your customer changelog from merged PRs in a minute instead of a day, so product teams tell every customer what changed without losing a day a week.
+graders:
+  - name: value-proposition-not-written
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Value proposition\s+Owner: value-prop\s+Last revised: 2026-01-05\s+_Not defined yet\.'

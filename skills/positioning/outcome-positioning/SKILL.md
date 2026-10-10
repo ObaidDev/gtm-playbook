@@ -75,6 +75,8 @@ In the interview below, "the user" is the Founder, and you only ask what is stil
 
 Give every question 2 to 4 lettered options drafted from what you found in step 2, mark the one you recommend, and tell the Founder they can answer with something else.
 
+Hold each answer to its branch's **done when** test before you count the branch as settled. An answer that fails the test settles nothing: say why in the next round and ask again with a sharper recommendation, instead of accepting it or offering a weaker claim as one of the options. Never show a draft of the section while the interview is running, and never park a branch whose test is unmet as an Open question: Open questions are only for when the Founder says to write now.
+
 The design tree for this skill grows from the root branches below. Each has a **done when** test: keep drilling into the decisions under a branch, round after round, until its test is met. The sub-decisions listed are where to start, not the whole tree; there is no limit on rounds. When revising, the Outcome positioning section's Open questions and any field it lacks are open branches: ask them in the first round (see [STATE.md](../../meta/setup-gtm/STATE.md)).
 
 - **Outcome**: growth or risk reduction, and the one result on the ICP's business it names. Done when the result is one the ICP's leadership already tracks (revenue, churn, the cost of a failure, a compliance finding), and you can trace the chain from the Value proposition's measure to it. Start from: growth or risk reduction, the result, who tracks it, and each step of the chain. Recommend the one the ICP's problem and the Value proposition's measure point to. If the Founder offers time saved or "more productive", say it is productivity and recommend what that time turns into.
@@ -89,7 +91,7 @@ If the Founder says to write now, or told you to take their answers as final, st
 
 ### 4. Confirm, then write
 
-Show the Founder the Outcome positioning section you are about to write, and, when revising, say what changes. Write once they confirm, or straight away if they already told you to write without confirming. A Founder's instruction to write without confirming does not waive the tests above: if their framing is productivity, say so in your reply and write the growth or risk outcome it leads to.
+Once the frontier is empty, or the Founder said to write now, show the Founder the Outcome positioning section you are about to write, in a message that asks nothing else, and, when revising, say what changes. Write only once they confirm that draft, or straight away if they already told you to write without confirming. An answer to an interview question is never a confirmation, even one given beside a draft. A Founder's instruction to write without confirming does not waive the tests above: if their framing is productivity, say so in your reply and write the growth or risk outcome it leads to.
 
 Replace the body of the Outcome positioning section only, in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives, and set its `Last revised` to today. Leave every other section exactly as it is, byte for byte, including its date. Never write any other file.
 

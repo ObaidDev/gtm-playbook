@@ -50,6 +50,8 @@ In the interview below, "the user" is the Founder, and you only ask what is stil
 
 Give every question 2 to 4 lettered options drafted from what you found in step 1, mark the one you recommend, and tell the Founder they can answer with something else.
 
+Hold each answer to its branch's **done when** test before you count the branch as settled. An answer that fails the test settles nothing: say why in the next round and ask again with a sharper recommendation, instead of accepting it or offering a weaker claim as one of the options. Never show a draft of the section while the interview is running, and never park a branch whose test is unmet as an Open question: Open questions are only for when the Founder says to write now.
+
 The design tree for this skill grows from the root branches below. Each has a **done when** test: keep drilling into the decisions under a branch, round after round, until its test is met. The sub-decisions listed are where to start, not the whole tree; there is no limit on rounds. On a re-run, the Product section's Open questions and any field it lacks are open branches: ask them in the first round (see [STATE.md](./STATE.md)).
 
 - **Product**: what the product does and for whom, in one or two sentences. Done when a stranger could say what job it does, for whom, and what they used before it. Start from: the job it does, who uses it (and who pays, if not the same person), what it replaces, and how it is delivered (web app, API, plugin, service). Recommend a sentence drafted from what you found in the Workspace (or, on a re-run, the current one).
@@ -62,7 +64,7 @@ If the Founder says to write now, or told you to take their answers as final, st
 
 ### 3. Confirm, then write
 
-Show the Founder the Product section you are about to write, and, on a re-run, say what changes. Write once they confirm, or straight away if they already told you to write without confirming.
+Once the frontier is empty, or the Founder said to write now, show the Founder the Product section you are about to write, in a message that asks nothing else, and, on a re-run, say what changes. Write only once they confirm that draft, or straight away if they already told you to write without confirming. An answer to an interview question is never a confirmation, even one given beside a draft.
 
 - **New Profile**: create `gtm/profile.md` from the template in [STATE.md](./STATE.md): the Product section filled in (with its Open questions, if any), and every other owned section present but empty. Every section's "Last revised" date is today.
 - **Re-run**: replace the body of the Product section only, and set its "Last revised" to today only if its content changed. Leave every other section exactly as it is, byte for byte, including its date. If a section the template lists is missing, add it empty with today's date; never remove a section.
