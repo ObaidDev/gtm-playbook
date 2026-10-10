@@ -25,15 +25,27 @@ The living description of one product's go-to-market position, created by the fi
 _Avoid_: brief, context, config
 
 **Artifact**:
-A concrete GTM deliverable a skill writes into the workspace, such as a post draft, lead-magnet outline, or outbound email.
+A concrete GTM deliverable a skill writes into the workspace, such as a post draft, lead-magnet outline, or outbound email. Every demand Artifact belongs to exactly one **Campaign**.
 _Avoid_: output, asset, deliverable
 
+**Campaign**:
+One hypothesis about the ICP, tested with exactly one **Lead magnet** and the Artifacts that promote it, ending in a **Verdict**. Moves through planned, live, and judged.
+_Avoid_: initiative, funnel, launch
+
+**Target signal**:
+The measurable result a Campaign commits to when planned, with a judge-by date (for example, 20 Lead magnet downloads and 3 Customer conversations by a given day).
+_Avoid_: goal, KPI, success metric
+
+**Verdict**:
+The judgment closing a Campaign: kept (keep running), killed (hypothesis false), or scaled (promote with paid).
+_Avoid_: result, outcome, status
+
 **Experiment log**:
-The running record of GTM experiments the founder has run and what happened.
+The running record of trials inside Campaigns (a post, a paid boost, an outbound batch), each with its signal.
 _Avoid_: journal, results, tracker
 
 **Customer conversation**:
-A recorded exchange with a prospect or customer: whether the problem was confirmed, objections raised, and their words. Evidence for revising the **Profile**.
+A recorded exchange with a prospect or customer: whether the problem was confirmed, objections raised, and their words. Evidence for revising the **Profile**; may link to the **Campaign** it came from.
 _Avoid_: call, interview, discovery call
 
 **Product stage**:
