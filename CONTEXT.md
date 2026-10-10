@@ -24,6 +24,10 @@ _Avoid_: project, repo
 The living description of one product's go-to-market position, created by the first skill and read by every downstream skill.
 _Avoid_: brief, context, config
 
+**Open question**:
+A decision in a skill's interview that the Founder left unsettled, recorded at the end of the Profile section it belongs to. A field still waiting on one holds the recommended draft, marked `(unconfirmed)`.
+_Avoid_: unknown, TODO, gap
+
 **Artifact**:
 A concrete GTM deliverable a skill writes into the workspace, such as a post draft, lead-magnet outline, or outbound email. Every demand Artifact belongs to exactly one **Campaign**.
 _Avoid_: output, asset, deliverable
@@ -67,7 +71,7 @@ An educational piece (checklist or guide with a distinct point of view) a prospe
 _Avoid_: freebie, opt-in, gated content
 
 **Lead stage**:
-The qualifier a prospect answers on the landing page, used to tell an ICP lead from a non-ICP lead.
+The qualifier a prospect answers on the landing page, used to tell an ICP lead from a non-ICP lead. Defined in the ICP.
 _Avoid_: stage (alone), lead score
 
 **Warm outbound**:

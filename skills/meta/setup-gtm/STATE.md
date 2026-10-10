@@ -25,6 +25,23 @@ A skill never guesses state it depends on. When what it needs is missing, it sto
 - **No Profile** (`gtm/profile.md` does not exist): run `/gtm-playbook:setup-gtm`.
 - **A needed section still holds its placeholder**: run the skill the placeholder names.
 
+### Open questions
+
+When the Founder stops an interview before every decision is settled (they say to write now, or to take their answers as final), the owning skill writes what it has and records the rest as Open questions, never guessing silently:
+
+- A field whose decision is still open holds the recommended draft followed by ` (unconfirmed)`. The field holds only that draft: why you recommend it, and what the Founder said that it replaces, go in your reply or the Open questions, never in the field.
+- The section ends with an Open questions list, one line per open decision, saying what would settle it. A section with nothing open has no Open questions list.
+
+  ```markdown
+  **Open questions:**
+
+  - <the decision still open, and what would settle it>
+  ```
+
+- A filled section that lacks a field its format lists (it was written before that field existed) is treated as if that field were an Open question.
+
+A skill reading another section never treats an Open question or an `(unconfirmed)` field as a missing prerequisite. It carries on, and tells the Founder which unconfirmed fields it built on and which skill settles them. The owning skill, on its next run, asks its section's Open questions and missing fields in the first round.
+
 ### Template
 
 Sections appear in this order, with these exact headings. Replace `<today>` with today's date.
@@ -40,6 +57,8 @@ Last revised: <today>
 **Product:** <what the product does and for whom, in one or two sentences>
 
 **Product stage:** <pre-product | beta | revenue>
+
+**Sales motion:** <product-led | sales-led>
 
 ## ICP
 
@@ -79,9 +98,15 @@ When its owner fills a section in, the heading, `Owner:` line, and `Last revised
   ```markdown
   **Who:** <the role and kind of company that has the problem>
 
+  **Segment:** <SMB | mid-market | enterprise>
+
   **Urgent and important problem:** <the problem the product solves for them, and why it is urgent and important now>
 
+  **Early adopters:** <the slice of the ICP that feels the problem most and will try an imperfect product now>
+
   **Platform:** <Meta | LinkedIn | X | another, the one social platform this ICP spends time on>
+
+  **Lead stage:** <the one question the landing page asks>. ICP lead: <the answers that mark an ICP lead>. Not ICP: <the answers that mark a non-ICP lead>.
   ```
 
 - **Value proposition** (value-prop):

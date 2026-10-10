@@ -40,7 +40,7 @@ Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](..
 
 Finding facts is your job, never the Founder's.
 
-- Read the whole Profile. The ICP section names the problem; the Value proposition section names the alternatives, the measure, and the claim; the Product section says what the product does and its Product stage; the current Outcome positioning, if filled in, is what this run revises. Note whether the ICP's or the Value proposition's `Last revised` date is later than the Outcome positioning's: if so, the framing was written for an older claim.
+- Read the whole Profile. The ICP section names the problem; the Value proposition section names the alternatives, the measure, and the claim; the Product section says what the product does and its Product stage; the current Outcome positioning, if filled in, is what this run revises. Note whether the ICP's or the Value proposition's `Last revised` date is later than the Outcome positioning's: if so, the framing was written for an older claim. Note any `(unconfirmed)` field you build on (see [STATE.md](../../meta/setup-gtm/STATE.md)).
 - Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: whether prospects asked about ROI, which outcomes they cared about, and the words they used. When revising, note the ones dated after the Outcome positioning's `Last revised` date.
 - Read whatever else describes the product, its data, and its integrations: a `README.md`, a landing page, docs, the code itself.
 - Note any answers the Founder already gave in the message that invoked this skill. Do not ask a question they have already answered.
@@ -67,23 +67,25 @@ In the interview below, "the user" is the Founder, and you only ask what is stil
 > ➡️ <your recommended answer>
 > ```
 >
-> Word each question so "yes" accepts your recommended answer.
->
 > Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
 >
 > Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yourself. Don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait.
 >
 > The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
 
-The design tree for this skill holds only these questions:
+Give every question 2 to 4 lettered options drafted from what you found in step 2, mark the one you recommend, and tell the Founder they can answer with something else.
 
-- **Outcome**: growth or risk reduction, and the one result on the ICP's business it names. Recommend the one the ICP's problem and the Value proposition's measure point to. If the Founder offers time saved or "more productive", say it is productivity and recommend what that time turns into.
-- **Show the work**: the work getting done that a demo or page shows, decided after Outcome. Recommend the finished output for one slice of the ICP's business, and steer away from workflow walkthroughs and feature tours.
-- **Context and harness**: why the product is ten times better at this outcome than the ICP using a general model themselves, decided after Outcome. Recommend the data, context, and harness you found in step 2. If the product is not AI-native, recommend writing `Not AI-native.` and saying what it has that the Value proposition's alternatives lack.
-- **Integrations**: how the product plugs into the ICP's work: MCP, APIs into the systems they already run, and handoffs to and from the humans alongside it. Recommend the ones you found in step 2, and name the human handoff even when there is no MCP server yet.
+The design tree for this skill grows from the root branches below. Each has a **done when** test: keep drilling into the decisions under a branch, round after round, until its test is met. The sub-decisions listed are where to start, not the whole tree; there is no limit on rounds. When revising, the Outcome positioning section's Open questions and any field it lacks are open branches: ask them in the first round (see [STATE.md](../../meta/setup-gtm/STATE.md)).
+
+- **Outcome**: growth or risk reduction, and the one result on the ICP's business it names. Done when the result is one the ICP's leadership already tracks (revenue, churn, the cost of a failure, a compliance finding), and you can trace the chain from the Value proposition's measure to it. Start from: growth or risk reduction, the result, who tracks it, and each step of the chain. Recommend the one the ICP's problem and the Value proposition's measure point to. If the Founder offers time saved or "more productive", say it is productivity and recommend what that time turns into.
+- **Show the work**: the work getting done that a demo or page shows, decided after Outcome. Done when you could describe the first thirty seconds of the demo as a finished output, with no screen being clicked through. Start from: the slice of the ICP's business, the finished output, and where it lands (an inbox, a report, a system of record). Recommend the finished output for one slice of the ICP's business, and steer away from workflow walkthroughs and feature tours.
+- **Context and harness**: why the product is ten times better at this outcome than the ICP using a general model themselves, decided after Outcome. Done when you can name what the product knows or checks that a general model given the same request does not, and what the general model gets wrong without it. Start from: the data it reads, the context it keeps, and the harness around the model (checks, steps, tools). Recommend the data, context, and harness you found in step 2. If the product is not AI-native, recommend writing `Not AI-native.` and saying what it has that the Value proposition's alternatives lack.
+- **Integrations**: how the product plugs into the ICP's work: MCP, APIs into the systems they already run, and handoffs to and from the humans alongside it. Done when every system the work reads from or writes to, and every human handoff, is named. Start from: the systems it reads, the systems it writes, whether it exposes MCP, and who approves or receives the work. Recommend the ones you found in step 2, and name the human handoff even when there is no MCP server yet.
 - **Evidence** (only when Customer conversations exist): whether the conversations show prospects asking about ROI, and which outcome they cared about. Recommend the change they support, quoting the prospects' own words.
 
 Do not ask about the ICP, the Value proposition, or pricing: the skills that own those sections do that. If the interview shows the Value proposition is wrong (for example, its measure is not one the outcome follows from), name `/gtm-playbook:value-prop` rather than changing it here.
+
+If the Founder says to write now, or told you to take their answers as final, stop interviewing: record every branch still open as an Open question, as [STATE.md](../../meta/setup-gtm/STATE.md) describes, and go to step 4.
 
 ### 4. Confirm, then write
 

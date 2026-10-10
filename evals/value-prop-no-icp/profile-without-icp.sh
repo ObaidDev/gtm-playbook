@@ -15,6 +15,8 @@ Last revised: 2026-01-05
 
 **Product stage:** beta
 
+**Sales motion:** product-led
+
 ## ICP
 
 Owner: define-icp

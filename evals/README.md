@@ -4,11 +4,12 @@ Behaviour tests for the skills, run with `claude plugin eval`. Each case runs a 
 
 | Case | What it checks |
 |---|---|
-| `setup-gtm-empty-workspace` | `setup-gtm` creates the Profile with the product, the Product stage, and an empty dated section per owning skill |
-| `setup-gtm-rerun` | Re-running `setup-gtm` updates the Product section, keeps every other section and its date, and adds missing sections |
+| `setup-gtm-empty-workspace` | `setup-gtm` creates the Profile with the product, the Product stage, the Sales motion, and an empty dated section per owning skill |
+| `setup-gtm-rerun` | Re-running `setup-gtm` updates the Product section, adds the Sales motion it lacked, keeps every other section and its date, and adds missing sections |
 | `setup-gtm-not-model-invoked` | Asking for setup in plain words never fires `setup-gtm` (only meaningful in the plugin arm; the no-plugin arm passes trivially) |
 | `define-icp-no-profile` | `define-icp` with no Profile names `setup-gtm` and writes nothing |
-| `define-icp-owns-only-icp` | `define-icp` fills the ICP section with its platform and moves its date, leaving every other section and its date unchanged |
+| `define-icp-owns-only-icp` | `define-icp` fills the ICP section with its segment, early adopters, platform, and Lead stage, and moves its date, leaving every other section and its date unchanged |
+| `define-icp-write-early` | `define-icp` told to write before the interview is done marks open fields `(unconfirmed)` and lists the Open questions, leaving every other section unchanged |
 | `value-prop-no-icp` | `value-prop` with the ICP still a placeholder names `define-icp` and writes nothing |
 | `value-prop-owns-only-value-prop` | `value-prop` fills the Value proposition section with its alternatives and measure, and moves its date, leaving every other section and its date unchanged |
 | `outcome-positioning-no-value-prop` | `outcome-positioning` with the Value proposition still a placeholder names `value-prop` and writes nothing |
