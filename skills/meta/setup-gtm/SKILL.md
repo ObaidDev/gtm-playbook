@@ -50,4 +50,4 @@ Never write any other file in `gtm/`: Campaigns, Customer conversations, and the
 
 Tell the Founder the Profile is ready and what to run next: `/gtm-playbook:define-icp` when the ICP section is empty, otherwise whichever owned section is still empty, in the template's order.
 
-Interview pattern adapted from Matt Pocock's `grilling` skill.
+Interview pattern adapted from Matt Pocock's [grilling skill](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md).

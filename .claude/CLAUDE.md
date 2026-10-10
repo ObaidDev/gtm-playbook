@@ -14,7 +14,9 @@ Workflow and meta skills are user-invoked (`disable-model-invocation: true`, wit
 
 Skills use the vocabulary in `CONTEXT.md` (Profile, Artifact, Campaign, ICP, Lead stage, and so on) and avoid the synonyms it lists. The `gtm/` state folder contract, including the Profile format and section owners, is defined in `skills/meta/setup-gtm/STATE.md`; a skill that adds or changes an owned Profile section updates that file too.
 
-Every `SKILL.md` ends with a one-line credit: the creator and Source title for a skill distilled from a Source, or the creator and work for a skill built on someone else's pattern (such as the interview loop, credited to Matt Pocock's `grilling` skill). Sources stay in the gitignored `sources/` folder and are never committed or quoted verbatim; skills paraphrase and drop all promotional content (ADR-0001).
+Every `SKILL.md` ends with a one-line credit: the creator and Source title for a skill distilled from a Source, or the creator and work for a skill built on someone else's pattern (such as the interview loop, credited to Matt Pocock's grilling skill). Link that credit to the original so a Founder can find it.
+
+Skills are self-contained: never assume another plugin (such as `mattpocock-skills`) is installed, and never tell the agent to call a skill outside this plugin. Embed the pattern in the skill itself; the credit line is attribution, not a dependency. Sources stay in the gitignored `sources/` folder and are never committed or quoted verbatim; skills paraphrase and drop all promotional content (ADR-0001).
 
 No em-dashes in this repo's prose. Rewrite the sentence with a comma, colon, period, or parentheses instead.
 
