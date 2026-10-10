@@ -19,6 +19,7 @@
     "./skills/meta/setup-gtm",
     "./skills/positioning/define-icp",
     "./skills/positioning/value-prop",
-    "./skills/positioning/outcome-positioning"
+    "./skills/positioning/outcome-positioning",
+    "./skills/positioning/outcome-pricing"
   ]
 }

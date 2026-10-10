@@ -105,3 +105,13 @@ When its owner fills a section in, the heading, `Owner:` line, and `Last revised
 
   **Integrations:** <MCP, APIs into the systems the ICP runs, and handoffs to and from the humans alongside it>
   ```
+
+- **Pricing** (outcome-pricing):
+
+  ```markdown
+  **Platform fee:** <the fixed fee and its billing period, with unlimited seats>
+
+  **Included usage:** <how many units of usage the platform fee includes, and the outcome one unit counts>
+
+  **Overage:** <the price per unit beyond the included usage>
+  ```

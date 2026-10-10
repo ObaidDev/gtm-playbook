@@ -1,0 +1,25 @@
+schema_version: "1.1"
+name: outcome-pricing-rejects-per-seat
+description: outcome-pricing given a per-seat price writes a platform fee with included usage and overage, and no price per seat on any of them.
+tags: [outcome-pricing]
+runs: 1
+context:
+  scaffold_script: existing-profile.sh
+execution:
+  max_turns: 15
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:outcome-pricing
+
+    Charge $49 per seat per month, and a typical team has 8 seats. Take my answers as final and write it without asking me to confirm.
+graders:
+  - name: pricing-has-three-parts
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Pricing\s+Owner: outcome-pricing\s+Last revised: \d{4}-\d{2}-\d{2}\s+\*\*Platform fee:\*\*[^#]*\*\*Included usage:\*\*[^#]*\*\*Overage:\*\*'
+  - name: no-price-per-seat
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '\*\*(Platform fee|Included usage|Overage):\*\*[^\n]*(per (seat|user)|/ ?(seat|user))'
+    flags: i
+    match: not_contains

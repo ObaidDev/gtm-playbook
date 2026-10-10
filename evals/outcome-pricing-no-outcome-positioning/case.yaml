@@ -1,0 +1,32 @@
+schema_version: "1.1"
+name: outcome-pricing-no-outcome-positioning
+description: outcome-pricing with the Outcome positioning still a placeholder stops, names outcome-positioning, and leaves the Profile unchanged.
+tags: [outcome-pricing]
+runs: 1
+context:
+  scaffold_script: profile-without-outcome-positioning.sh
+execution:
+  max_turns: 10
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:outcome-pricing
+
+    Charge $900 a month with unlimited seats, including 200 published changelogs, then $5 per changelog after that. Take my answers as final and write it without asking me to confirm.
+graders:
+  - name: names-outcome-positioning
+    type: regex
+    pattern: 'outcome-positioning'
+  - name: pricing-still-empty
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Pricing\s+Owner: outcome-pricing\s+Last revised: 2026-01-05\s+_Not defined yet\. Run `/gtm-playbook:outcome-pricing`\._\s*$'
+  - name: nothing-written
+    type: tool_used
+    tool: Write
+    min: 0
+    max: 0
+  - name: nothing-edited
+    type: tool_used
+    tool: Edit
+    min: 0
+    max: 0

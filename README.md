@@ -2,7 +2,7 @@
 
 Stateful go-to-market skills for Claude Code, distilled from material I have learned from. Instead of generic advice, the skills keep your GTM work in your Workspace (a Profile, Campaigns, Customer conversations, an Experiment log) and build on it every time you run them.
 
-> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, and `outcome-positioning` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
+> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, and `outcome-pricing` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
 
 ## Install
 
@@ -19,7 +19,7 @@ On older versions, add the marketplace first, then install:
 /plugin install gtm-playbook@obaiddev
 ```
 
-Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, and `/gtm-playbook:outcome-positioning`. All state is kept in a `gtm/` folder there.
+Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. All state is kept in a `gtm/` folder there.
 
 ## Flows
 
@@ -37,7 +37,7 @@ setup-gtm → define-icp → value-prop → outcome-positioning → outcome-pric
 | 2 | [`define-icp`](./skills/positioning/define-icp/SKILL.md) | Who has the urgent, important problem, and which platform they spend time on |
 | 3 | [`value-prop`](./skills/positioning/value-prop/SKILL.md) | A one-sentence, ten-times-better Value proposition |
 | 4 | [`outcome-positioning`](./skills/positioning/outcome-positioning/SKILL.md) | Growth or risk-reduction framing; show the work, context, integrations |
-| 5 | `outcome-pricing` ([#13](https://github.com/ObaidDev/gtm-playbook/issues/13)) | Platform fee plus usage pricing |
+| 5 | [`outcome-pricing`](./skills/positioning/outcome-pricing/SKILL.md) | Platform fee plus usage pricing |
 
 Steps 4 and 5 matter most for AI-native products; steps 1 to 3 are enough to start a Campaign.
 

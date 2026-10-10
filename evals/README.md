@@ -14,6 +14,9 @@ Behaviour tests for the skills, run with `claude plugin eval`. Each case runs a 
 | `outcome-positioning-no-value-prop` | `outcome-positioning` with the Value proposition still a placeholder names `value-prop` and writes nothing |
 | `outcome-positioning-owns-only-outcome-positioning` | `outcome-positioning` fills the Outcome positioning section with its outcome, the work to show, its context and harness, and its integrations, and moves its date, leaving every other section and its date unchanged |
 | `outcome-positioning-rejects-productivity` | `outcome-positioning` given a time-saved framing writes a growth or risk reduction outcome, not productivity |
+| `outcome-pricing-no-outcome-positioning` | `outcome-pricing` with the Outcome positioning still a placeholder names `outcome-positioning` and writes nothing |
+| `outcome-pricing-owns-only-pricing` | `outcome-pricing` fills the Pricing section with its platform fee, included usage, and overage, and moves its date, leaving every other section and its date unchanged |
+| `outcome-pricing-rejects-per-seat` | `outcome-pricing` given a per-seat price writes a platform fee with included usage and overage, not a price per seat |
 
 ## Running
 
