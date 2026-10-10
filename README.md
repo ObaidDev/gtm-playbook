@@ -33,8 +33,8 @@ setup-gtm → define-icp → value-prop → outcome-positioning → outcome-pric
 
 | Step | Skill | What you end up with |
 |---|---|---|
-| 1 | [`setup-gtm`](./skills/meta/setup-gtm/SKILL.md) | A Profile with your product and Product stage |
-| 2 | [`define-icp`](./skills/positioning/define-icp/SKILL.md) | Who has the urgent, important problem, and which platform they spend time on |
+| 1 | [`setup-gtm`](./skills/meta/setup-gtm/SKILL.md) | A Profile with your product, Product stage, and Sales motion |
+| 2 | [`define-icp`](./skills/positioning/define-icp/SKILL.md) | Who has the urgent, important problem, their early adopters, which platform they spend time on, and the Lead stage question |
 | 3 | [`value-prop`](./skills/positioning/value-prop/SKILL.md) | A one-sentence, ten-times-better Value proposition |
 | 4 | [`outcome-positioning`](./skills/positioning/outcome-positioning/SKILL.md) | Growth or risk-reduction framing; show the work, context, integrations |
 | 5 | [`outcome-pricing`](./skills/positioning/outcome-pricing/SKILL.md) | Platform fee plus usage pricing |

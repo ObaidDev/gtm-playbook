@@ -16,6 +16,8 @@ Last revised: 2026-01-05
 
 **Product stage:** beta
 
+**Sales motion:** product-led
+
 ## ICP
 
 Owner: define-icp
@@ -23,9 +25,15 @@ Last revised: 2026-01-20
 
 **Who:** Heads of product at 20 to 200 person B2B SaaS companies who ship weekly.
 
+**Segment:** mid-market
+
 **Urgent and important problem:** Customers churn because they never hear what changed, and writing release notes by hand eats a day a week.
 
+**Early adopters:** Heads of product at SaaS companies that ship daily and already write a changelog by hand every week.
+
 **Platform:** LinkedIn
+
+**Lead stage:** How do you tell customers what shipped today? ICP lead: we write release notes or a changelog by hand. Not ICP: we do not tell customers, or a tool already writes it.
 
 ## Value proposition
 

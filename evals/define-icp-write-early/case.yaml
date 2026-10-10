@@ -1,0 +1,38 @@
+schema_version: "1.1"
+name: define-icp-write-early
+description: define-icp told to write before the interview is done writes what it has, marks the open fields unconfirmed, and lists the Open questions, leaving every other section unchanged.
+tags: [define-icp]
+runs: 1
+context:
+  scaffold_script: existing-profile.sh
+execution:
+  max_turns: 15
+  allowed_tools: [Read, Write, Edit, Glob, Grep, Skill]
+  prompt: |
+    /gtm-playbook:define-icp
+
+    All I know so far: our ICP is heads of product at B2B SaaS companies. I have not worked out the rest yet. Write the ICP now with what you have, and do not ask me anything else.
+graders:
+  - name: icp-filled
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## ICP\s+Owner: define-icp\s+Last revised: \d{4}-\d{2}-\d{2}\s+(?!_Not defined yet)[^#]*heads of product[^#]*## Value proposition'
+    flags: i
+  - name: icp-has-unconfirmed-field
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## ICP\s[^#]*\(unconfirmed\)[^#]*## Value proposition'
+  - name: icp-lists-open-questions
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## ICP\s[^#]*\*\*Open questions:\*\*\s+- [^#]*## Value proposition'
+  - name: value-proposition-unchanged
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Value proposition\s+Owner: value-prop\s+Last revised: 2026-02-12\s+\*\*Value proposition:\*\* Shiplog writes your customer changelog from merged PRs in seconds, so product teams stop losing a day a week to release notes\.\s+\*\*Alternatives:\*\* Writing release notes by hand\.\s+\*\*Measure:\*\* Time to publish the changelog: seconds instead of a day a week\.\s+## Outcome positioning'
+  - name: no-duplicated-sections
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '^## ICP\s*$'
+    flags: m
+    match: count:1

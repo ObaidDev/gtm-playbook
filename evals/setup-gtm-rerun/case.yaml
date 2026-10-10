@@ -17,6 +17,10 @@ graders:
     type: regex
     target: { source: file, path: gtm/profile.md }
     pattern: '\*\*Product stage:\*\*\s*beta\b'
+  - name: missing-sales-motion-added
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Product\s[^#]*\*\*Sales motion:\*\*\s*(product-led|sales-led)\b[^#]*## ICP'
   - name: product-description-kept
     type: regex
     target: { source: file, path: gtm/profile.md }

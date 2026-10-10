@@ -34,7 +34,7 @@ Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](..
 
 Finding facts is your job, never the Founder's.
 
-- Read the whole Profile. The ICP section says who has the problem and what it is; the Product section says what the product does; the current Value proposition, if filled in, is what this run revises. Note whether the ICP's `Last revised` date is later than the Value proposition's: if so, the claim was written for an older ICP.
+- Read the whole Profile. The ICP section says who has the problem and what it is; the Product section says what the product does; the current Value proposition, if filled in, is what this run revises. Note whether the ICP's `Last revised` date is later than the Value proposition's: if so, the claim was written for an older ICP. Note any `(unconfirmed)` field you build on (see [STATE.md](../../meta/setup-gtm/STATE.md)).
 - Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: which alternatives prospects named, whether the claim landed, and the words they used. When revising, note the ones dated after the Value proposition's `Last revised` date.
 - Read whatever else describes the product and its competitors: a `README.md`, a landing page, docs.
 - Note any answers the Founder already gave in the message that invoked this skill. Do not ask a question they have already answered.
@@ -61,23 +61,25 @@ In the interview below, "the user" is the Founder, and you only ask what is stil
 > ➡️ <your recommended answer>
 > ```
 >
-> Word each question so "yes" accepts your recommended answer.
->
 > Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
 >
 > Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yourself. Don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait.
 >
 > The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
 
-The design tree for this skill holds only these questions:
+Give every question 2 to 4 lettered options drafted from what you found in step 2, mark the one you recommend, and tell the Founder they can answer with something else.
 
-- **Alternatives**: what the ICP uses today to solve the problem. Recommend the ones you found in step 2; always consider doing nothing and, for an AI-native product, a general model.
-- **Measure**: the one measure on which the product is ten times better than those alternatives, decided after Alternatives. Recommend the measure the ICP's problem points to.
-- **Ten times check**: whether the gain on that measure is plausibly ten times, and why. If it is not, say so plainly and recommend a narrower ICP, a different alternative, or a different measure; do not accept the claim because the Founder repeats it. A narrower ICP is a decision for `/gtm-playbook:define-icp`, so name that skill rather than changing the ICP here.
-- **Sentence**: the one-sentence Value proposition, decided last. Recommend a draft that names the ICP's problem, the gain, and the measure, in the ICP's own words where Customer conversations give them.
+The design tree for this skill grows from the root branches below. Each has a **done when** test: keep drilling into the decisions under a branch, round after round, until its test is met. The sub-decisions listed are where to start, not the whole tree; there is no limit on rounds. When revising, the Value proposition section's Open questions and any field it lacks are open branches: ask them in the first round (see [STATE.md](../../meta/setup-gtm/STATE.md)).
+
+- **Alternatives**: what the ICP uses today to solve the problem. Done when the list names at least one product the ICP could buy instead, alongside doing nothing and, for an AI-native product, a general model. Start from: named competitors, what the ICP does by hand, a hire or an agency, and doing nothing. Recommend the ones you found in step 2. If the Founder says there are no competitors, push back: a problem nobody else is trying to solve is usually not urgent, or the ICP is drawn around the wrong problem. Recommend looking again, and name `/gtm-playbook:define-icp` if the ICP needs redrawing.
+- **Measure**: the one measure on which the product is ten times better than those alternatives, decided after Alternatives. Done when it is one number the ICP already feels, and you can state its value under each Alternative and with the product. Start from: the unit (hours, money, errors, reach), its value today, and its value with the product. Recommend the measure the ICP's problem points to.
+- **Ten times check**: whether the gain on that measure is plausibly ten times, and why. Done when the gain is ten times against every Alternative and the Founder can say what the product does that each one cannot, or the Founder has chosen a different alternative or measure. If it is not, say so plainly and recommend a narrower ICP, a different alternative, or a different measure; do not accept the claim because the Founder repeats it. A narrower ICP is a decision for `/gtm-playbook:define-icp`, so name that skill rather than changing the ICP here.
+- **Sentence**: the one-sentence Value proposition, decided last. Done when it names the ICP's problem, the gain, and the measure, and the Founder would say it to a prospect unchanged. Recommend a draft in the ICP's own words where Customer conversations give them.
 - **Evidence** (only when Customer conversations exist): whether the conversations show the claim landing or not. Recommend the change they support, quoting the prospects' own words.
 
 Do not ask about the ICP, outcome positioning, or pricing: the skills that own those sections do that.
+
+If the Founder says to write now, or told you to take their answers as final, stop interviewing: record every branch still open as an Open question, as [STATE.md](../../meta/setup-gtm/STATE.md) describes, and go to step 4.
 
 ### 4. Confirm, then write
 

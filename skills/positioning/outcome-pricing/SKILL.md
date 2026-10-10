@@ -42,7 +42,7 @@ Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](..
 
 Finding facts is your job, never the Founder's.
 
-- Read the whole Profile. The Outcome positioning section names the outcome and the work the product gets done; the Value proposition section names the alternatives and the measure; the ICP section names who pays; the Product section gives the Product stage; the current Pricing, if filled in, is what this run revises. Note whether the Value proposition's or the Outcome positioning's `Last revised` date is later than the Pricing's: if so, the price was set for an older claim.
+- Read the whole Profile. The Outcome positioning section names the outcome and the work the product gets done; the Value proposition section names the alternatives and the measure; the ICP section names who pays; the Product section gives the Product stage and Sales motion; the current Pricing, if filled in, is what this run revises. Note whether the Value proposition's or the Outcome positioning's `Last revised` date is later than the Pricing's: if so, the price was set for an older claim. Note any `(unconfirmed)` field you build on (see [STATE.md](../../meta/setup-gtm/STATE.md)).
 - Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: price objections, what prospects pay today for the alternatives, and the words they used. When revising, note the ones dated after the Pricing's `Last revised` date.
 - Read whatever else describes the product's current pricing or its costs: a `README.md`, a pricing page, billing code, the code itself.
 - Note any answers the Founder already gave in the message that invoked this skill. Do not ask a question they have already answered.
@@ -69,27 +69,29 @@ In the interview below, "the user" is the Founder, and you only ask what is stil
 > ➡️ <your recommended answer>
 > ```
 >
-> Word each question so "yes" accepts your recommended answer.
->
 > Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
 >
 > Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), dispatch a sub-agent to find it; don't ask the user for anything you could look up yourself. Don't block on it: a running exploration is an unsettled prerequisite, so only the questions downstream of it wait for the sub-agent to report; ask the rest of the frontier now. The _decisions_ are the user's: put each to them and wait.
 >
 > The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding.
 
-The design tree for this skill holds only these questions:
+Give every question 2 to 4 lettered options drafted from what you found in step 2, mark the one you recommend, and tell the Founder they can answer with something else.
 
-- **Unit of usage**: the one outcome the product charges for, counted as the customer sees it. Recommend the unit the Outcome positioning's work points to. If the Founder offers tokens or API calls, say they are a cost to the Founder, not an outcome the customer sees, and recommend the outcome they stand for.
-- **Platform fee**: the fixed fee, its billing period, and unlimited seats, decided after Unit of usage. Recommend a fee set against what the work costs the ICP without the product (the Value proposition's alternatives and measure). If the Founder offers a per-seat price, say it is per-seat pricing and recommend the platform fee it turns into.
-- **Included usage**: how many units the platform fee includes, decided after Unit of usage and Platform fee. Recommend what a typical customer uses in their first months, so growing customers reach the overage.
-- **Overage**: the price per unit beyond the included usage, decided after Included usage. Recommend a price at or above the platform fee's price per included unit, and above what one unit costs to deliver.
+The design tree for this skill grows from the root branches below. Each has a **done when** test: keep drilling into the decisions under a branch, round after round, until its test is met. The sub-decisions listed are where to start, not the whole tree; there is no limit on rounds. When revising, the Pricing section's Open questions and any field it lacks are open branches: ask them in the first round (see [STATE.md](../../meta/setup-gtm/STATE.md)).
+
+- **Unit of usage**: the one outcome the product charges for, counted as the customer sees it. Done when a customer could count it from their own records, and you know what does not count (a failed or redone unit). Start from: the outcome, how it is counted, and what is excluded. Recommend the unit the Outcome positioning's work points to. If the Founder offers tokens or API calls, say they are a cost to the Founder, not an outcome the customer sees, and recommend the outcome they stand for.
+- **Platform fee**: the fixed fee, its billing period, and unlimited seats, decided after Unit of usage. Done when the fee is set against a named cost the ICP pays today for the same work. Start from: what the work costs without the product (people, tools, an agency), the billing period, and how the Sales motion sells it. Recommend a fee set against what the work costs the ICP without the product (the Value proposition's alternatives and measure). If the Founder offers a per-seat price, say it is per-seat pricing and recommend the platform fee it turns into.
+- **Included usage**: how many units the platform fee includes, decided after Unit of usage and Platform fee. Done when you can say how many units a typical customer uses in their first months and when a growing one reaches the overage. Recommend what a typical customer uses in their first months, so growing customers reach the overage.
+- **Overage**: the price per unit beyond the included usage, decided after Included usage. Done when the price is at or above the platform fee's price per included unit and above what one unit costs to deliver. Start from: what one unit costs to deliver. Recommend a price at or above the platform fee's price per included unit, and above what one unit costs to deliver.
 - **Evidence** (only when Customer conversations exist): whether the conversations show price objections or what prospects pay today. Recommend the change they support, quoting the prospects' own words.
 
 Do not ask about the ICP, the Value proposition, or the Outcome positioning: the skills that own those sections do that. If the interview shows the Outcome positioning is wrong (for example, there is no outcome a customer could count), name `/gtm-playbook:outcome-positioning` rather than changing it here.
 
+If the Founder says to write now, or told you to take their answers as final, stop interviewing: record every branch still open as an Open question, as [STATE.md](../../meta/setup-gtm/STATE.md) describes, and go to step 4.
+
 ### 4. Confirm, then write
 
-Show the Founder the Pricing section you are about to write, and, when revising, say what changes. Write once they confirm, or straight away if they already told you to write without confirming. A Founder's instruction to write without confirming does not waive the tests above: if their price is per seat, say so in your reply and write the platform fee, included usage, and overage it turns into.
+Show the Founder the Pricing section you are about to write, and, when revising, say what changes. Write once they confirm, or straight away if they already told you to write without confirming. A Founder's instruction to write without confirming does not waive the tests above: if their price is per seat, say so in your reply and write the platform fee, included usage, and overage it turns into, keeping the per-seat figure out of the field values.
 
 Replace the body of the Pricing section only, in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives, and set its `Last revised` to today. Leave every other section exactly as it is, byte for byte, including its date. Never write any other file.
 

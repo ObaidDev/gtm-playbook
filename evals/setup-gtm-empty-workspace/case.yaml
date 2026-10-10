@@ -23,6 +23,10 @@ graders:
     type: regex
     target: { source: file, path: gtm/profile.md }
     pattern: '\*\*Product stage:\*\*\s*beta\b'
+  - name: sales-motion-set
+    type: regex
+    target: { source: file, path: gtm/profile.md }
+    pattern: '## Product\s[^#]*\*\*Sales motion:\*\*\s*(product-led|sales-led)\b[^#]*## ICP'
   - name: icp-section-empty-and-dated
     type: regex
     target: { source: file, path: gtm/profile.md }
