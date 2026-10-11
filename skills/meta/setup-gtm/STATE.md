@@ -214,7 +214,7 @@ Any field below the header may be left open the way a Profile field is (see Open
 
 ### Lead magnet
 
-`lead-magnet` writes `lead-magnet.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign, and a Campaign has exactly one Lead magnet. When the Campaign's Lead magnet line was left open, `lead-magnet.md` is where that decision is settled; `campaign.md` stays as it was planned.
+`lead-magnet` writes `lead-magnet.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign, and a Campaign has exactly one Lead magnet.
 
 ```markdown
 # Lead magnet: <the title the ICP sees>
@@ -224,21 +224,15 @@ Campaign: <the Campaign's slug>
 Written: <today>
 Profile date: <the later of the ICP's and the Value proposition's Last revised dates>
 
-**Form:** <checklist | guide>
+**Form:** <checklist | guide, from the Campaign's Lead magnet line>
 
-**For:** <the slice of the ICP named in the Campaign's hypothesis>
+**Problem:** <the one specific problem it solves, from the Campaign's Lead magnet line>
 
-**Problem:** <the one specific problem it solves>
-
-**Point of view:** <one sentence a reader could disagree with: what the ICP usually hears or does about the problem, and what the Founder says instead>
-
-**Backed by:** <the example, number, or story from the Founder or from Customer conversations that supports the point of view>
+**Point of view:** <its distinct point of view, from the Campaign's Lead magnet line>
 
 **Outline:**
 
-1. <item or section title>: <what it tells the reader to do or check, in one or two sentences>
-
-**Next step:** <how it ends: the one action it invites, and the Value proposition's gain it names>
+1. <item or section title>: <what it teaches, in one or two sentences>
 ```
 
-A checklist has 5 to 10 items and a guide has 3 to 7 sections. **Problem**, **Point of view**, and **Outline** are never `(unconfirmed)` and never Open questions: a Lead magnet without all three is not written.
+**Form**, **Problem**, and **Point of view** are copied from the Campaign, `(unconfirmed)` marker included. **Outline** is never `(unconfirmed)` and never an Open question: a Lead magnet without it is not written.
