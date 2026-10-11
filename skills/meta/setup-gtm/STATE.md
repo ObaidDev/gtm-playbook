@@ -272,7 +272,14 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 
 **Problem:** <the one specific problem the Lead magnet solves, from the Lead magnet>
 
-**Form:**
+**Copy:**
+
+- Headline: <the Lead magnet's title>
+- Subhead: <the Lead magnet's Problem>
+- Button: Download the <the Lead magnet's Form>
+- Thank-you: Check your email for the <the Lead magnet's Form>.
+
+**Fields:**
 
 - Name
 - Email
@@ -283,4 +290,4 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 - <an answer from the ICP's Lead stage>: <ICP lead | Not ICP>
 ```
 
-Everything below the header is copied from the Lead magnet and the ICP, `(unconfirmed)` markers included. The landing page decides nothing of its own, so it has no Open questions list.
+Everything below the header is copied from the Lead magnet and the ICP, `(unconfirmed)` markers included. The landing page decides nothing of its own, so it has no Open questions list. **Fields** are what the page's form asks for; the Lead magnet's **Form** is whether it is a checklist or a guide.
