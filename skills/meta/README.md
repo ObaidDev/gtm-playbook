@@ -10,4 +10,6 @@ Reachable only when you type them (`disable-model-invocation: true`).
 
 ## Model-invoked
 
-None yet.
+Reached by the model when another skill calls them, never from the `/` menu (`user-invocable: false`).
+
+- **[interview](./interview/SKILL.md)**: The round-based Interview every workflow skill runs with you before writing its Profile section.
