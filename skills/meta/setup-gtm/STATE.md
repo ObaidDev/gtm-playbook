@@ -169,9 +169,15 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 
 **Hypothesis:** <one sentence: which slice of the ICP has which problem, and what they will do if it is true>
 
-**Target signal:** <the numbers the Campaign commits to, each counted from what it produces: Lead magnet downloads, how many of them are ICP leads by their Lead stage answer, Customer conversations, and any free trials started>
+**Target signal:** <the numbers the Campaign commits to, each counted from what it produces: Lead magnet downloads, how many of them are ICP leads by their Lead stage answer, Customer conversations, and any free trials started. Missing them kills the hypothesis>
+
+**Scale if:** <the higher numbers, counted the same way, at which the Campaign is worth promoting with paid>
+
+**Publish by:** <YYYY-MM-DD, the day the Lead magnet and the first post are published>
 
 **Judge by:** <YYYY-MM-DD>
+
+**Builds on unconfirmed:** <each `(unconfirmed)` Profile field the Campaign relies on, and what its Customer conversations should find out to settle it, or `Nothing.`>
 
 **Artifacts needed:**
 
@@ -183,4 +189,4 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 
 Exactly one Lead magnet is always listed. Any other line under **Artifacts needed** may be dropped when the Founder decided the Campaign does without it.
 
-**Hypothesis**, **Target signal**, and **Judge by** are never `(unconfirmed)` and never Open questions: a Campaign without all three is not written. Any other field may be left open the way a Profile field is (see Open questions above), with the Open questions list at the end of `campaign.md`.
+**Hypothesis**, **Target signal**, **Publish by**, and **Judge by** are never `(unconfirmed)` and never Open questions: a Campaign without all four is not written. On the judge-by date, a Campaign that misses its Target signal is killed, one that meets it but falls short of **Scale if** is kept, and one that meets **Scale if** is scaled. Any other field may be left open the way a Profile field is (see Open questions above), with the Open questions list at the end of `campaign.md`.
