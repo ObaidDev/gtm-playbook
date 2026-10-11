@@ -257,3 +257,30 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 ```
 
 There is one `## Post` heading per post the Campaign's Social posts line asks for. Every post ends with the Link and never asks the reader to comment to get the Lead magnet. The posts are never `(unconfirmed)` and never Open questions: a file without them is not written.
+
+### Landing page
+
+`landing-page` writes `landing-page.md`, built from the ICP and, through the Lead magnet, the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign that already has its Lead magnet, once per Campaign.
+
+```markdown
+# Landing page: <the Lead magnet's title>
+
+Owner: landing-page
+Campaign: <the Campaign's slug>
+Written: <today>
+Profile date: <the later of the ICP's and the Value proposition's Last revised dates>
+
+**Problem:** <the one specific problem the Lead magnet solves, from the Lead magnet>
+
+**Form:**
+
+- Name
+- Email
+- <the Lead stage question, from the ICP>
+
+**Answers:**
+
+- <an answer from the ICP's Lead stage>: <ICP lead | Not ICP>
+```
+
+Everything below the header is copied from the Lead magnet and the ICP, `(unconfirmed)` markers included. The landing page decides nothing of its own, so it has no Open questions list.

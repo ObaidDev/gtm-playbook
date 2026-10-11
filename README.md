@@ -2,7 +2,7 @@
 
 Stateful go-to-market skills for Claude Code, distilled from material I have learned from. Instead of generic advice, the skills keep your GTM work in your Workspace (a Profile, Campaigns, Customer conversations, an Experiment log) and build on it every time you run them.
 
-> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, `outcome-pricing`, `plan-campaign`, `lead-magnet`, and `social-post` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
+> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, `outcome-pricing`, `plan-campaign`, `lead-magnet`, `social-post`, and `landing-page` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
 
 ## Install
 
@@ -19,7 +19,7 @@ On older versions, add the marketplace first, then install:
 /plugin install gtm-playbook@obaiddev
 ```
 
-Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. When you are ready to test a hypothesis, run `/gtm-playbook:plan-campaign`, then `/gtm-playbook:lead-magnet` and `/gtm-playbook:social-post`. All state is kept in a `gtm/` folder there.
+Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. When you are ready to test a hypothesis, run `/gtm-playbook:plan-campaign`, then `/gtm-playbook:lead-magnet`, `/gtm-playbook:social-post`, and `/gtm-playbook:landing-page`. All state is kept in a `gtm/` folder there.
 
 ## Flows
 
@@ -65,7 +65,7 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
 | 1 | [`plan-campaign`](./skills/demand/plan-campaign/SKILL.md) | Opens a Campaign: one hypothesis, a Target signal, a judge-by date |
 | 2 | [`lead-magnet`](./skills/demand/lead-magnet/SKILL.md) | Outlines the one Lead magnet the Campaign tests |
 | 3 | [`social-post`](./skills/demand/social-post/SKILL.md) | Problem-first posts that link to the Lead magnet |
-| 3 | `landing-page` ([#7](https://github.com/ObaidDev/gtm-playbook/issues/7)) | Copy asking for name, email, and Lead stage |
+| 3 | [`landing-page`](./skills/demand/landing-page/SKILL.md) | Copy asking for name, email, and Lead stage |
 | 3 | `warm-outbound` ([#8](https://github.com/ObaidDev/gtm-playbook/issues/8)) | Messages to people who took the Lead magnet |
 | 4 | `gtm-review` ([#18](https://github.com/ObaidDev/gtm-playbook/issues/18)) | Checks the Campaign's Artifacts before you publish |
 | 5 | `log-experiment` ([#10](https://github.com/ObaidDev/gtm-playbook/issues/10)) | Records each trial (a post, a boost, an outbound batch) and its signal |
