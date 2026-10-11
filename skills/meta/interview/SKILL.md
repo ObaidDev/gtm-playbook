@@ -1,6 +1,6 @@
 ---
 name: interview
-description: "The round-based Interview gtm-playbook workflow skills run with the Founder before writing a Profile section. Use only when a gtm-playbook skill tells you to run it."
+description: "The round-based Interview gtm-playbook workflow skills run with the Founder before writing a Profile section, a Campaign definition, or an Artifact. Use only when a gtm-playbook skill tells you to run it."
 user-invocable: false
 ---
 
