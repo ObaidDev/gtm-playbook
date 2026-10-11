@@ -2,7 +2,7 @@
 
 Stateful go-to-market skills for Claude Code, distilled from material I have learned from. Instead of generic advice, the skills keep your GTM work in your Workspace (a Profile, Campaigns, Customer conversations, an Experiment log) and build on it every time you run them.
 
-> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, and `outcome-pricing` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
+> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, `outcome-pricing`, and `plan-campaign` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
 
 ## Install
 
@@ -19,7 +19,7 @@ On older versions, add the marketplace first, then install:
 /plugin install gtm-playbook@obaiddev
 ```
 
-Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. All state is kept in a `gtm/` folder there.
+Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. When you are ready to test a hypothesis, run `/gtm-playbook:plan-campaign`. All state is kept in a `gtm/` folder there.
 
 ## Flows
 
@@ -62,7 +62,7 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
 
 | Step | Skill | What it does |
 |---|---|---|
-| 1 | `plan-campaign` ([#17](https://github.com/ObaidDev/gtm-playbook/issues/17)) | Opens a Campaign: one hypothesis, a Target signal, a judge-by date |
+| 1 | [`plan-campaign`](./skills/demand/plan-campaign/SKILL.md) | Opens a Campaign: one hypothesis, a Target signal, a judge-by date |
 | 2 | `lead-magnet` ([#5](https://github.com/ObaidDev/gtm-playbook/issues/5)) | Outlines the one Lead magnet the Campaign tests |
 | 3 | `social-post` ([#6](https://github.com/ObaidDev/gtm-playbook/issues/6)) | Problem-first posts that link to the Lead magnet |
 | 3 | `landing-page` ([#7](https://github.com/ObaidDev/gtm-playbook/issues/7)) | Copy asking for name, email, and Lead stage |

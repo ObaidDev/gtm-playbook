@@ -21,6 +21,7 @@
     "./skills/positioning/define-icp",
     "./skills/positioning/value-prop",
     "./skills/positioning/outcome-positioning",
-    "./skills/positioning/outcome-pricing"
+    "./skills/positioning/outcome-pricing",
+    "./skills/demand/plan-campaign"
   ]
 }

@@ -140,3 +140,47 @@ When its owner fills a section in, the heading, `Owner:` line, and `Last revised
 
   **Overage:** <the price per unit beyond the included usage>
   ```
+
+## Campaigns
+
+Each Campaign (ADR-0003) is a folder `gtm/campaigns/<slug>/`, where `<slug>` is a short name in lowercase words joined by hyphens. The folder holds the Campaign's definition, `campaign.md`, and every Artifact the Campaign needs.
+
+### Lifecycle
+
+A Campaign moves through planned, live, and judged, in that order. Each transition has one owning skill, and only that skill changes the `State:` line:
+
+- **planned**: `plan-campaign` creates the folder and its `campaign.md`.
+- **live**: `log-experiment` sets it on the Campaign's first Experiment log entry.
+- **judged**: `gtm-retro` sets it when it records the Verdict.
+
+`plan-campaign` writes the definition once and never edits an existing Campaign. A new hypothesis is a new Campaign.
+
+### Definition
+
+`plan-campaign` creates `campaign.md` in this format. Replace `<today>` with today's date.
+
+```markdown
+# Campaign: <a short name for the hypothesis>
+
+Owner: plan-campaign
+State: planned
+Planned: <today>
+Profile date: <the later of the ICP's and the Value proposition's Last revised dates>
+
+**Hypothesis:** <one sentence: which slice of the ICP has which problem, and what they will do if it is true>
+
+**Target signal:** <the numbers the Campaign commits to, each counted from what it produces: Lead magnet downloads, how many of them are ICP leads by their Lead stage answer, Customer conversations, and any free trials started>
+
+**Judge by:** <YYYY-MM-DD>
+
+**Artifacts needed:**
+
+- Lead magnet: <checklist | guide> on <the one specific problem it solves>, with <its distinct point of view>
+- Social posts: <how many> on <the ICP's Platform>, each linking to the landing page
+- Landing page: asks for name, email, and the Lead stage question
+- Warm outbound: to every ICP lead who takes the Lead magnet
+```
+
+Exactly one Lead magnet is always listed. Any other line under **Artifacts needed** may be dropped when the Founder decided the Campaign does without it.
+
+**Hypothesis**, **Target signal**, and **Judge by** are never `(unconfirmed)` and never Open questions: a Campaign without all three is not written. Any other field may be left open the way a Profile field is (see Open questions above), with the Open questions list at the end of `campaign.md`.
