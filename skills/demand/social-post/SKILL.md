@@ -24,7 +24,11 @@ Hold every post to these tests:
 
 ### 1. Check the prerequisites
 
-Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](../../meta/setup-gtm/STATE.md): if the Profile is missing, or the ICP or the Value proposition still holds its placeholder, name the skill to run first (`define-icp` before `value-prop`), then **stop**: write nothing and do not interview the Founder.
+Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](../../meta/setup-gtm/STATE.md). In each case below, **stop**: write nothing and do not interview the Founder.
+
+- If the Profile does not exist, tell the Founder to run `/gtm-playbook:setup-gtm` first.
+- If the ICP still holds its placeholder, tell the Founder to run `/gtm-playbook:define-icp` first.
+- If the Value proposition still holds its placeholder, tell the Founder to run `/gtm-playbook:value-prop` first.
 
 Then read every `campaign.md` under `gtm/campaigns/`. A Campaign can take posts only if its `State:` is `planned`, its **Artifacts needed** has a Social posts line, and its folder holds a `lead-magnet.md` and no `social-posts.md`. Stop the same way in each case below.
 

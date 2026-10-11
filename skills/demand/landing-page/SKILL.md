@@ -12,7 +12,7 @@ Read [STATE.md](../../meta/setup-gtm/STATE.md) before writing anything: it is th
 
 ## Why name, email, and Lead stage
 
-Buyers with budget do not comment on a post to get something free; they click its link. A landing page that asks for name, email, and Lead stage brings in higher-intent buyers and their contact details, and the Lead stage answer tells the Founder which of them are ICP leads before warm outbound.
+Buyers with budget do not comment on a post to get something free; they click its link. Sending them to a landing page instead of asking for comments brings in higher-intent buyers. Asking for name, email, and Lead stage gets their contact details, and the Lead stage answer tells the Founder which of them are ICP leads before warm outbound.
 
 ## Process
 
