@@ -236,3 +236,30 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 ```
 
 **Form**, **Problem**, and **Point of view** are copied from the Campaign, `(unconfirmed)` marker included. **Outline** is never `(unconfirmed)` and never an Open question: a Lead magnet without it is not written.
+
+### Landing page
+
+`landing-page` writes `landing-page.md`, built from the ICP, so its `Profile date` is the ICP's `Last revised` date. It is written only into a `planned` Campaign that already has its Lead magnet, once per Campaign.
+
+```markdown
+# Landing page: <the Lead magnet's title>
+
+Owner: landing-page
+Campaign: <the Campaign's slug>
+Written: <today>
+Profile date: <the ICP's Last revised date>
+
+**Offer:** <the copy above the form: the Lead magnet's title and the one problem it solves>
+
+**Form:**
+
+- Name
+- Email
+- <the Lead stage question, from the ICP>
+
+**Answers:**
+
+- <a choice the prospect can pick>: <ICP lead | Not ICP>
+```
+
+The Lead stage question is copied from the ICP, `(unconfirmed)` marker included. **Answers** is never an Open question: a landing page without it is not written.
