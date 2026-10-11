@@ -239,7 +239,7 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 
 ### Landing page
 
-`landing-page` writes `landing-page.md`, built from the ICP, so its `Profile date` is the ICP's `Last revised` date. It is written only into a `planned` Campaign that already has its Lead magnet, once per Campaign.
+`landing-page` writes `landing-page.md`, built from the ICP and, through the Lead magnet, the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign that already has its Lead magnet, once per Campaign.
 
 ```markdown
 # Landing page: <the Lead magnet's title>
@@ -247,9 +247,9 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 Owner: landing-page
 Campaign: <the Campaign's slug>
 Written: <today>
-Profile date: <the ICP's Last revised date>
+Profile date: <the later of the ICP's and the Value proposition's Last revised dates>
 
-**Offer:** <the copy above the form: the Lead magnet's title and the one problem it solves>
+**Problem:** <the one specific problem the Lead magnet solves, from the Lead magnet>
 
 **Form:**
 
@@ -259,7 +259,7 @@ Profile date: <the ICP's Last revised date>
 
 **Answers:**
 
-- <a choice the prospect can pick>: <ICP lead | Not ICP>
+- <an answer from the ICP's Lead stage>: <ICP lead | Not ICP>
 ```
 
-The Lead stage question is copied from the ICP, `(unconfirmed)` marker included. **Answers** is never an Open question: a landing page without it is not written.
+Everything below the header is copied from the Lead magnet and the ICP, `(unconfirmed)` markers included. The landing page decides nothing of its own, so it has no Open questions list.
