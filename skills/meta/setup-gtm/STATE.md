@@ -236,3 +236,24 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 ```
 
 **Form**, **Problem**, and **Point of view** are copied from the Campaign, `(unconfirmed)` marker included. **Outline** is never `(unconfirmed)` and never an Open question: a Lead magnet without it is not written.
+
+### Social posts
+
+`social-post` writes `social-posts.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign that already has its Lead magnet, once per Campaign.
+
+```markdown
+# Social posts: <the Lead magnet's title>
+
+Owner: social-post
+Campaign: <the Campaign's slug>
+Written: <today>
+Profile date: <the later of the ICP's and the Value proposition's Last revised dates>
+
+**Link:** <the landing page URL where the Lead magnet is downloaded, or `<landing page link>` until it is live>
+
+## Post 1: <the part of the problem it teaches>
+
+<the post text, ending with a line that sends the reader to the Link to download the Lead magnet>
+```
+
+There is one `## Post` heading per post the Campaign's Social posts line asks for. Every post ends with the Link and never asks the reader to comment to get the Lead magnet. The posts are never `(unconfirmed)` and never Open questions: a file without them is not written.
