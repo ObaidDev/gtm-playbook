@@ -81,6 +81,10 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
 
 `find-out-asap` and `demand-acquisition` ([#15](https://github.com/ObaidDev/gtm-playbook/issues/15)) fire on their own when you drift into building in stealth or cold-emailing shared lead lists.
 
+### Behind the workflow skills
+
+[`interview`](./skills/meta/interview/SKILL.md) runs the round-based Interview every workflow skill holds with you before it writes. You never call it yourself.
+
 ### Growing the playbook
 
 `ingest-source` ([#16](https://github.com/ObaidDev/gtm-playbook/issues/16)) turns new learning material into distilled notes and suggests skills to create or update.

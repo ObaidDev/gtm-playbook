@@ -24,8 +24,12 @@ _Avoid_: project, repo
 The living description of one product's go-to-market position, created by the first skill and read by every downstream skill.
 _Avoid_: brief, context, config
 
+**Interview**:
+The round-based questioning a workflow skill runs with the Founder before writing its Profile section.
+_Avoid_: grilling, Q&A, questionnaire
+
 **Open question**:
-A decision in a skill's interview that the Founder left unsettled, recorded at the end of the Profile section it belongs to. A field still waiting on one holds the recommended draft, marked `(unconfirmed)`.
+A decision in a skill's **Interview** that the Founder left unsettled, recorded at the end of the Profile section it belongs to. A field still waiting on one holds the recommended draft, marked `(unconfirmed)`.
 _Avoid_: unknown, TODO, gap
 
 **Artifact**:

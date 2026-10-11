@@ -1,6 +1,6 @@
 # Third-party notice
 
-The interview in step 2 of [SKILL.md](./SKILL.md) is copied from Matt Pocock's grilling skill:
+The Interview in [SKILL.md](./SKILL.md), below its first paragraph, is copied from Matt Pocock's grilling skill:
 https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md
 
 It is used under the MIT License:

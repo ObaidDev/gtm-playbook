@@ -8,7 +8,7 @@ Skills live in bucket folders under `skills/`: `positioning/`, `demand/`, `princ
 
 Every skill in a bucket is **promoted**: it appears in all three of its bucket `README.md`, the top-level `README.md`, and the `skills` array of `.claude-plugin/plugin.json`. Each bucket `README.md` lists its skills with a one-line description, linked to the `SKILL.md`, grouped into **User-invoked** and **Model-invoked**.
 
-Workflow and meta skills are user-invoked (`disable-model-invocation: true`, with a human-facing `description`). Principle skills are model-invoked, with a `description` whose trigger phrasing names the trap they guard against.
+Workflow and meta skills are user-invoked (`disable-model-invocation: true`, with a human-facing `description`). The exception is `interview`, a meta skill other skills call through the Skill tool: it is model-invoked and hidden from the `/` menu (`user-invocable: false`). Principle skills are model-invoked, with a `description` whose trigger phrasing names the trap they guard against.
 
 `ask-gtm` is the router. Whenever a skill is added, renamed, or removed, re-read `ask-gtm`'s `SKILL.md` and re-sync it in the same change, so it never routes to a skill that does not exist or misses one that does.
 
@@ -16,7 +16,7 @@ Skills use the vocabulary in `CONTEXT.md` (Profile, Artifact, Campaign, ICP, Lea
 
 A `SKILL.md` carries no credit line for its Sources. Sources stay in the gitignored `sources/` folder and are never committed or quoted verbatim; skills paraphrase and drop all promotional content (ADR-0001).
 
-Skills are self-contained: never assume another plugin (such as `mattpocock-skills`) is installed, and never tell the agent to call a skill outside this plugin. When a skill needs another skill's pattern, copy its text verbatim into the skill (quoted, not paraphrased), and add a `NOTICE.md` beside the `SKILL.md` carrying the original's link and license notice. That `NOTICE.md` is the credit: the `SKILL.md` itself never names, links, or points to the skill it borrowed from, nor to its `NOTICE.md`. This applies to the interview loop in every workflow skill: copy it, with its `NOTICE.md`, from `skills/meta/setup-gtm/`.
+Skills are self-contained: never assume another plugin (such as `mattpocock-skills`) is installed, and never tell the agent to call a skill outside this plugin. When a skill needs another skill's pattern, copy its text verbatim into the skill (quoted, not paraphrased), and add a `NOTICE.md` beside the `SKILL.md` carrying the original's link and license notice. That `NOTICE.md` is the credit: the `SKILL.md` itself never names, links, or points to the skill it borrowed from, nor to its `NOTICE.md`. Workflow skills never copy the interview loop: they call the `interview` skill (`gtm-playbook:interview`), which holds the only copy and its `NOTICE.md` (ADR-0004).
 
 No em-dashes in this repo's prose. Rewrite the sentence with a comma, colon, period, or parentheses instead.
 
