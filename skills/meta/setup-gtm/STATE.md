@@ -5,7 +5,7 @@ All GTM state for one product lives in a single `gtm/` folder at the Workspace r
 ```
 gtm/
 ├── profile.md              # the Profile (created by setup-gtm)
-├── campaigns/<slug>/       # one folder per Campaign: its definition and its Artifacts
+├── campaigns/<slug>/       # one folder per Campaign: campaign.md and its Artifacts
 ├── conversations/          # one file per Customer conversation, named <YYYY-MM-DD>-<who>.md
 └── experiment-log.md       # trials inside Campaigns, each with its signal
 ```
@@ -190,3 +190,55 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 Exactly one Lead magnet is always listed. Any other line under **Artifacts needed** may be dropped when the Founder decided the Campaign does without it.
 
 **Hypothesis**, **Target signal**, **Publish by**, and **Judge by** are never `(unconfirmed)` and never Open questions: a Campaign without all four is not written. On the judge-by date, a Campaign that misses its Target signal is killed, one that meets it but falls short of **Scale if** is kept, and one that meets **Scale if** is scaled. Any other field may be left open the way a Profile field is (see Open questions above), with the Open questions list at the end of `campaign.md`.
+
+## Artifacts
+
+Every demand Artifact belongs to exactly one Campaign (ADR-0003) and is one Markdown file in that Campaign's folder, named after its type, such as `gtm/campaigns/<slug>/lead-magnet.md`. The skill that writes an Artifact owns it; every other skill only reads it. Each Artifact's format below says which Campaign states its skill writes into. An Artifact skill never overwrites or edits an existing Artifact.
+
+### Header
+
+Every Artifact starts with this header. Replace `<today>` with today's date.
+
+```markdown
+# <Artifact type>: <its title>
+
+Owner: <the skill that wrote it>
+Campaign: <the Campaign's slug>
+Written: <today>
+Profile date: <the latest Last revised date among the Profile sections it was built from>
+```
+
+Each Artifact's format below names the Profile sections it is built from. An Artifact is **stale** when any of those sections has a `Last revised` date later than its `Profile date`: it was built against an older Profile.
+
+Any field below the header may be left open the way a Profile field is (see Open questions above), with the Open questions list at the end of the file, unless the Artifact's format says otherwise.
+
+### Lead magnet
+
+`lead-magnet` writes `lead-magnet.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign, and a Campaign has exactly one Lead magnet. When the Campaign's Lead magnet line was left open, `lead-magnet.md` is where that decision is settled; `campaign.md` stays as it was planned.
+
+```markdown
+# Lead magnet: <the title the ICP sees>
+
+Owner: lead-magnet
+Campaign: <the Campaign's slug>
+Written: <today>
+Profile date: <the later of the ICP's and the Value proposition's Last revised dates>
+
+**Form:** <checklist | guide>
+
+**For:** <the slice of the ICP named in the Campaign's hypothesis>
+
+**Problem:** <the one specific problem it solves>
+
+**Point of view:** <one sentence a reader could disagree with: what the ICP usually hears or does about the problem, and what the Founder says instead>
+
+**Backed by:** <the example, number, or story from the Founder or from Customer conversations that supports the point of view>
+
+**Outline:**
+
+1. <item or section title>: <what it tells the reader to do or check, in one or two sentences>
+
+**Next step:** <how it ends: the one action it invites, and the Value proposition's gain it names>
+```
+
+A checklist has 5 to 10 items and a guide has 3 to 7 sections. **Problem**, **Point of view**, and **Outline** are never `(unconfirmed)` and never Open questions: a Lead magnet without all three is not written.
