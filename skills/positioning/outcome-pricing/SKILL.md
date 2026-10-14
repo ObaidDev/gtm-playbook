@@ -23,9 +23,9 @@ Outcome pricing has three parts:
 Hold every answer to these tests:
 
 - **No per-seat price.** Seats are unlimited. If the Founder proposes a price per user, seat, or login, say it is per-seat pricing and recommend the platform fee it turns into.
-- **Charged on the outcome.** The unit of usage is the outcome in the Outcome positioning, counted as the customer sees it (a changelog published, a ticket resolved, a lead booked), not an internal cost such as tokens or API calls.
-- **Priced on the work done.** The platform fee is set against what the work would cost the ICP without the product, and is consistent with the Value proposition's measure. A fee as low as a seat-priced tool is a sign it is priced as a tool, not as the work.
-- **Room to grow.** The included usage covers a typical customer starting out, so a customer who gets more outcomes reaches the overage, and the overage price per unit is above what one unit costs the Founder to deliver. As model costs fall, the Founder can lower the overage and stay profitable.
+- **Charged on the outcome.** One unit of usage is one outcome the product delivers, the outcome the Outcome positioning names.
+- **Priced on the work done.** The platform fee is set against a share of what the ICP pays people to do the work, plus the software budget. A fee as low as a seat-priced tool is a sign it is priced as a tool, not as the work.
+- **Room to grow.** A customer who gets more outcomes uses more than the included usage and pays the overage, and the overage price per unit is above what one unit costs the Founder to deliver. As model costs fall, the Founder can lower the overage and stay profitable.
 
 ## Process
 
@@ -45,31 +45,17 @@ Finding facts is your job, never the Founder's.
 - Read the whole Profile. The Outcome positioning section names the outcome and the work the product gets done; the Value proposition section names the alternatives and the measure; the ICP section names who pays; the Product section gives the Product stage and Sales motion; the current Pricing, if filled in, is what this run revises. Note whether the Value proposition's or the Outcome positioning's `Last revised` date is later than the Pricing's: if so, the price was set for an older claim. Note any `(unconfirmed)` field you build on (see [STATE.md](../../meta/setup-gtm/STATE.md)).
 - Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: price objections, what prospects pay today for the alternatives, and the words they used. When revising, note the ones dated after the Pricing's `Last revised` date.
 - Read whatever else describes the product's current pricing or its costs: a `README.md`, a pricing page, billing code, the code itself.
-- Note any answers the Founder already gave in the message that invoked this skill. Do not ask a question they have already answered.
+- Note any answers the Founder already gave in the message that invoked this skill.
 
-### 3. Interview in rounds
+### 3. Interview
 
-Run the Interview: call the Skill tool with `gtm-playbook:interview`. You only ask what is still open after step 2.
+Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the Pricing's unit of usage, Platform fee (the fee, its billing period, and unlimited seats), Included usage, and Overage, on the current section's Open questions and any field it lacks (see [STATE.md](../../meta/setup-gtm/STATE.md)), and, when Customer conversations exist, on whether they show price objections or what prospects pay today, held to the tests above.
 
-Give every question 2 to 4 lettered options drafted from what you found in step 2, mark the one you recommend, and tell the Founder they can answer with something else.
-
-Hold each answer to its branch's **done when** test before you count the branch as settled. An answer that fails the test settles nothing: say why in the next round and ask again with a sharper recommendation, instead of accepting it or offering a weaker claim as one of the options. Never show a draft of the section while the interview is running, and never park a branch whose test is unmet as an Open question: Open questions are only for when the Founder says to write now.
-
-The design tree for this skill grows from the root branches below. Each has a **done when** test: keep drilling into the decisions under a branch, round after round, until its test is met. The sub-decisions listed are where to start, not the whole tree; there is no limit on rounds. When revising, the Pricing section's Open questions and any field it lacks are open branches: ask them in the first round (see [STATE.md](../../meta/setup-gtm/STATE.md)).
-
-- **Unit of usage**: the one outcome the product charges for, counted as the customer sees it. Done when a customer could count it from their own records, and you know what does not count (a failed or redone unit). Start from: the outcome, how it is counted, and what is excluded. Recommend the unit the Outcome positioning's work points to. If the Founder offers tokens or API calls, say they are a cost to the Founder, not an outcome the customer sees, and recommend the outcome they stand for.
-- **Platform fee**: the fixed fee, its billing period, and unlimited seats, decided after Unit of usage. Done when the fee is set against a named cost the ICP pays today for the same work. Start from: what the work costs without the product (people, tools, an agency), the billing period, and how the Sales motion sells it. Recommend a fee set against what the work costs the ICP without the product (the Value proposition's alternatives and measure). If the Founder offers a per-seat price, say it is per-seat pricing and recommend the platform fee it turns into.
-- **Included usage**: how many units the platform fee includes, decided after Unit of usage and Platform fee. Done when you can say how many units a typical customer uses in their first months and when a growing one reaches the overage. Recommend what a typical customer uses in their first months, so growing customers reach the overage.
-- **Overage**: the price per unit beyond the included usage, decided after Included usage. Done when the price is at or above the platform fee's price per included unit and above what one unit costs to deliver. Start from: what one unit costs to deliver. Recommend a price at or above the platform fee's price per included unit, and above what one unit costs to deliver.
-- **Evidence** (only when Customer conversations exist): whether the conversations show price objections or what prospects pay today. Recommend the change they support, quoting the prospects' own words.
-
-Do not ask about the ICP, the Value proposition, or the Outcome positioning: the skills that own those sections do that. If the interview shows the Outcome positioning is wrong (for example, there is no outcome a customer could count), name `/gtm-playbook:outcome-positioning` rather than changing it here.
-
-If the Founder says to write now, or told you to take their answers as final, stop interviewing: record every branch still open as an Open question, as [STATE.md](../../meta/setup-gtm/STATE.md) describes, and go to step 4.
+Do not ask about the ICP, the Value proposition, or the Outcome positioning: `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, and `/gtm-playbook:outcome-positioning` own those sections, so if the Outcome positioning looks wrong, name `/gtm-playbook:outcome-positioning` rather than changing it here. If the Founder says to write now, or told you to take their answers as final, record every open field as an Open question, as [STATE.md](../../meta/setup-gtm/STATE.md) describes.
 
 ### 4. Confirm, then write
 
-Once the frontier is empty, or the Founder said to write now, show the Founder the Pricing section you are about to write, in a message that asks nothing else, and, when revising, say what changes. Write only once they confirm that draft, or straight away if they already told you to write without confirming. An answer to an interview question is never a confirmation, even one given beside a draft. A Founder's instruction to write without confirming does not waive the tests above: if their price is per seat, say so in your reply and write the platform fee, included usage, and overage it turns into, keeping the per-seat figure out of the field values.
+Once the Interview is done, or the Founder said to write now, show the Founder the Pricing section you are about to write, in a message that asks nothing else, and, when revising, say what changes. Write only once they confirm that draft, or straight away if they already told you to write without confirming. An answer to an interview question is never a confirmation, even one given beside a draft. A Founder's instruction to write without confirming does not waive the tests above: if their price is per seat, say so in your reply and write the platform fee, included usage, and overage it turns into, keeping the per-seat figure out of the field values.
 
 Replace the body of the Pricing section only, in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives, and set its `Last revised` to today. Leave every other section exactly as it is, byte for byte, including its date. Never write any other file.
 
