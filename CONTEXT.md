@@ -71,7 +71,7 @@ A one-sentence claim of how the product is ten times better than the alternative
 _Avoid_: tagline, pitch, USP
 
 **Lead magnet**:
-An educational piece (checklist or guide with a distinct point of view) a prospect trades their contact details for.
+An educational piece (checklist or guide with a distinct point of view) that solves one specific problem of the ICP, which a prospect trades their contact details for.
 _Avoid_: freebie, opt-in, gated content
 
 **Lead stage**:

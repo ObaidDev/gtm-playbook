@@ -6,7 +6,7 @@ user-invocable: false
 
 # Interview
 
-In the interview below, "the user" is the Founder. The workflow skill that called this one says what to ask about and when the Interview is done.
+In the interview below, "the user" is the Founder. The workflow skill that called this one says what to ask about.
 
 Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 

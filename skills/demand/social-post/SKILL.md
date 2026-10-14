@@ -42,16 +42,13 @@ If more than one Campaign can take posts and the Founder did not name one, ask w
 
 Read the whole Profile, the Campaign's `campaign.md` (its Hypothesis, and its Social posts line for how many posts and which Platform), and its `lead-magnet.md`. Note every `(unconfirmed)` field you build on, including the Social posts line, and any answers the Founder already gave.
 
-### 3. Interview in rounds
+### 3. Interview
 
-Run the Interview: call the Skill tool with `gtm-playbook:interview`. You only ask what is still open after step 2. Give every question 2 to 4 lettered options drafted from what you found, mark the one you recommend, and hold each answer to its branch's **done when** test. Never show a draft of the posts while the Interview is running.
-
-- **Angles**: what each post teaches, one per post the Social posts line asks for. Done when every angle passes the Problem first test. Recommend angles drawn from the Lead magnet.
-- **Link**: the landing page URL. Done when the Founder gives it, or says the landing page is not live yet (then every post uses `<landing page link>`).
+Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the angle of each post the Social posts line asks for (what it teaches, drawn from the Lead magnet) and the landing page URL (or `<landing page link>` if the page is not live yet), held to the tests above.
 
 If the Founder asks for a comment-below call to action, or a post written for likes, refuse and say why. If they want a different problem or Platform, that is a different Campaign: name `/gtm-playbook:plan-campaign`. Do not draft the landing page or the warm outbound: they are separate Artifacts.
 
-If the Founder says to write now, stop interviewing. Angles can never be left open: if they are unsettled, do not write; say so and ask again.
+If the Founder says to write now, the angles can never be left open.
 
 ### 4. Confirm, then write
 
