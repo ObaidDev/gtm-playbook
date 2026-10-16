@@ -63,7 +63,7 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
 | Step | Skill | What it does |
 |---|---|---|
 | 1 | [`plan-campaign`](./skills/demand/plan-campaign/SKILL.md) | Opens a Campaign: one hypothesis, a Target signal, a judge-by date |
-| 2 | [`lead-magnet`](./skills/demand/lead-magnet/SKILL.md) | Outlines the one Lead magnet the Campaign tests |
+| 2 | [`lead-magnet`](./skills/demand/lead-magnet/SKILL.md) | Outlines the one Lead magnet the Campaign tests, built from what already works and what your ICP asks |
 | 3 | [`social-post`](./skills/demand/social-post/SKILL.md) | Problem-first posts that link to the Lead magnet, adapting Proven posts from your niche |
 | 3 | [`landing-page`](./skills/demand/landing-page/SKILL.md) | Copy asking for name, email, and Lead stage, then a guided build in a free tool |
 | 3 | `warm-outbound` ([#8](https://github.com/ObaidDev/gtm-playbook/issues/8)) | Messages to people who took the Lead magnet |
@@ -83,7 +83,7 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
 
 ### Behind the workflow skills
 
-[`interview`](./skills/meta/interview/SKILL.md) runs the round-based Interview every workflow skill holds with you before it writes, and [`research`](./skills/meta/research/SKILL.md) researches your market for a workflow skill (for example, the Proven posts `social-post` adapts) and saves its notes in `gtm/research/`. You never call either yourself.
+[`interview`](./skills/meta/interview/SKILL.md) runs the round-based Interview every workflow skill holds with you before it writes, and [`research`](./skills/meta/research/SKILL.md) researches your market for a workflow skill (for example, the Proven posts `social-post` adapts and the Proven lead magnets `lead-magnet` builds on) and saves its notes in `gtm/research/`. You never call either yourself.
 
 ### Growing the playbook
 

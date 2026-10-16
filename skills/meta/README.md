@@ -13,4 +13,4 @@ Reachable only when you type them (`disable-model-invocation: true`).
 Reached by the model when another skill calls them, never from the `/` menu (`user-invocable: false`).
 
 - **[interview](./interview/SKILL.md)**: The round-based Interview every workflow skill runs with you before writing its Profile section, Campaign definition, or Artifact.
-- **[research](./research/SKILL.md)**: Researches a question about your market against primary sources and saves the findings in your Workspace, such as the Proven posts `social-post` adapts.
+- **[research](./research/SKILL.md)**: Researches a question about your market against primary sources and saves the findings in your Workspace, such as the Proven posts `social-post` adapts and the Proven lead magnets `lead-magnet` builds on.
