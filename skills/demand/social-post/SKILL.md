@@ -1,6 +1,6 @@
 ---
 name: social-post
-description: "Draft your Campaign's social posts: problem-first posts for your ICP's Platform, built from your ICP, Value proposition, and the Campaign's Lead magnet, each ending with a link to the Lead magnet. Run after lead-magnet, once per Campaign."
+description: "Draft your Campaign's social posts: problem-first posts for your ICP's Platform, built from your ICP, Value proposition, and the Campaign's Lead magnet, adapting posts already working in your niche, each ending with a link to the Lead magnet. Run after lead-magnet, once per Campaign."
 disable-model-invocation: true
 ---
 
@@ -19,6 +19,12 @@ Hold every post to these tests:
 - **Problem first.** It teaches the ICP something about the urgent and important problem the Lead magnet solves, and says why the product is ten times better at it, in the words of the Value proposition. It does not try to sell the product.
 - **Ends with a link.** Its last line sends the reader to the landing page to download the Lead magnet.
 - **No comment-below call to action.** Never "comment below for the guide". The people who comment for something free are rarely buyers. Buyers with budget lurk: they do not comment in public, but they follow a link.
+
+## Adapt a Proven post
+
+Never start a post from a blank page. Look at what already works in the ICP's niche, a **Proven post**, and adapt it: take what works, personalise it with the Founder's ICP, Value proposition, and Lead magnet, and turn it into something valuable for the ICP.
+
+A Proven post improves a post; it never replaces the plan. Each post still teaches the angle the Interview settles, and still passes the tests above. From a Proven post, take only its structure: the hook, the format, how the teaching unfolds. If it ends by asking for comments, its ending becomes the link. If it pulls only through likes-bait, it is not a Proven post. A post with no Proven post to adapt is written problem-first all the same.
 
 ## Process
 
@@ -42,9 +48,13 @@ If more than one Campaign can take posts and the Founder did not name one, ask w
 
 Read the whole Profile, the Campaign's `campaign.md` (its Hypothesis, and its Social posts line for how many posts and which Platform), and its `lead-magnet.md`. Note every `(unconfirmed)` field you build on, including the Social posts line, and any answers the Founder already gave.
 
+Then call the Skill tool with `gtm-playbook:research`, every time, to find Proven posts on the ICP's Platform about the problem the Lead magnet solves. Tell it the primary source is the post itself, public on the Platform or in an open community, with the comments that show it pulled the ICP in, never an article that rounds up posts or hooks. Do not wait for it: start the Interview.
+
 ### 3. Interview
 
-Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the angle of each post the Social posts line asks for (what it teaches, drawn from the Lead magnet) and the landing page URL (or `<landing page link>` if the page is not live yet), held to the tests above.
+Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the angle of each post the Social posts line asks for (what it teaches, drawn from the Lead magnet, and the Proven post it adapts, if any) and the landing page URL (or `<landing page link>` if the page is not live yet), held to the tests above. Ask about the landing page URL first; ask the angles once the research findings are in, so each recommended angle can name its Proven post.
+
+If the research finds no Proven post, say so and recommend the angles without one. Never ask the Founder for example posts, though use any they offer.
 
 If the Founder asks for a comment-below call to action, or a post written for likes, refuse and say why. If they want a different problem or Platform, that is a different Campaign: name `/gtm-playbook:plan-campaign`. Do not draft the landing page or the warm outbound: they are separate Artifacts.
 
@@ -52,7 +62,7 @@ If the Founder says to write now, the angles can never be left open.
 
 ### 4. Confirm, then write
 
-Show the Founder the posts you are about to write, each checked against the tests above, in a message that asks nothing else. Write only once they confirm that draft, or straight away if they told you to write without confirming. An answer to an Interview question is never a confirmation.
+Show the Founder the posts you are about to write, each checked against the tests above and naming the Proven post it adapts, if any, in a message that asks nothing else. Write only once they confirm that draft, or straight away if they told you to write without confirming. An answer to an Interview question is never a confirmation.
 
 Check again that the Campaign is still `planned` and holds no `social-posts.md`. Create `gtm/campaigns/<slug>/social-posts.md` in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives. Write nothing else: not the Profile, not `campaign.md`, not any other Artifact.
 

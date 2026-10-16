@@ -78,6 +78,14 @@ _Avoid_: freebie, opt-in, gated content
 The qualifier a prospect answers on the landing page, used to tell an ICP lead from a non-ICP lead. Defined in the ICP.
 _Avoid_: stage (alone), lead score
 
+**Proven post**:
+A post someone else already published on the ICP's Platform, about the ICP's problem, that visibly pulls that ICP in. A social post adapts its structure and personalises it; it never copies it. Engagement alone does not make a post proven.
+_Avoid_: template, swipe, inspiration, viral post
+
+**Proven lead magnet**:
+A free checklist or guide someone else already offers the ICP on the same problem, that the ICP visibly seeks out or recommends. A Lead magnet adapts its structure and fills its gaps with its own point of view; it never copies it.
+_Avoid_: competitor guide, template, swipe
+
 **Warm outbound**:
 Outreach to a prospect who has already taken a lead magnet, opening from the problem that action reveals.
 _Avoid_: cold outbound, follow-up, nurture

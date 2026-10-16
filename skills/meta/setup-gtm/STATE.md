@@ -7,10 +7,15 @@ gtm/
 ├── profile.md              # the Profile (created by setup-gtm)
 ├── campaigns/<slug>/       # one folder per Campaign: campaign.md and its Artifacts
 ├── conversations/          # one file per Customer conversation, named <YYYY-MM-DD>-<who>.md
+├── research/               # research notes, one Markdown file per question (written by research)
 └── experiment-log.md       # trials inside Campaigns, each with its signal
 ```
 
 `setup-gtm` creates only `profile.md`. Each other path is created by the skill that owns it, the first time it has something to write.
+
+## Research notes
+
+`research` writes each set of findings to its own Markdown file in `gtm/research/`, citing the source of every claim. The notes are free-form and never a prerequisite: a skill that reads them never stops because they are missing, and no other skill writes them.
 
 ## The Profile
 
