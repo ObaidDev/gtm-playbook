@@ -1,6 +1,6 @@
 ---
 name: social-post
-description: "Draft your Campaign's social posts: problem-first posts for your ICP's Platform, built from your ICP, Value proposition, and the Campaign's Lead magnet, adapting posts already working in your niche, each ending with a link to the Lead magnet. Run after lead-magnet, once per Campaign."
+description: "Draft your Campaign's social posts: problem-first posts for your ICP's Platform, built from your ICP, Value proposition, and the Campaign's Lead magnet, adapting posts already working in your niche, each ending with a link to the Lead magnet. Run after lead-magnet, and again to add more posts to a planned or live Campaign."
 disable-model-invocation: true
 ---
 
@@ -36,11 +36,11 @@ Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](..
 - If the ICP still holds its placeholder, tell the Founder to run `/gtm-playbook:define-icp` first.
 - If the Value proposition still holds its placeholder, tell the Founder to run `/gtm-playbook:value-prop` first.
 
-Then read every `campaign.md` under `gtm/campaigns/`. A Campaign can take posts only if its `State:` is `planned`, its **Artifacts needed** has a Social posts line, and its folder holds a `lead-magnet.md` and no `social-posts.md`. Stop the same way in each case below.
+Then read every `campaign.md` under `gtm/campaigns/`. A Campaign can take posts only if its **Artifacts needed** has a Social posts line and its folder holds a `lead-magnet.md`. It takes its first posts while `planned`, and more posts, appended to its `social-posts.md`, while `planned` or `live`. Stop the same way in each case below.
 
-- If no Campaign is planned, tell the Founder to run `/gtm-playbook:plan-campaign` first.
+- If no Campaign is planned or live, tell the Founder to run `/gtm-playbook:plan-campaign` first.
 - If the Campaign has no Lead magnet yet, tell the Founder to run `/gtm-playbook:lead-magnet` first. Every post links to it.
-- If the Campaign already has its posts, or has no Social posts line, refuse: its posts are written once, or not at all. To test other posts, the Founder plans a new Campaign.
+- If the Campaign has no Social posts line, or is `judged`, refuse. To test other posts, the Founder plans a new Campaign.
 
 If more than one Campaign can take posts and the Founder did not name one, ask which before the Interview.
 
@@ -54,6 +54,8 @@ Then call the Skill tool with `gtm-playbook:research`, every time, to find Prove
 
 Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the angle of each post the Social posts line asks for (what it teaches, drawn from the Lead magnet, and the Proven post it adapts, if any) and the landing page URL (or `<landing page link>` if the page is not live yet), held to the tests above. Ask about the landing page URL first; ask the angles once the research findings are in, so each recommended angle can name its Proven post.
 
+For more posts, read the existing `social-posts.md` first. The Interview settles how many to add, which the Founder sets, and an angle for each that no existing post teaches. The new posts end with the file's Link.
+
 If the research finds no Proven post, say so and recommend the angles without one. Never ask the Founder for example posts, though use any they offer.
 
 If the Founder asks for a comment-below call to action, or a post written for likes, refuse and say why. If they want a different problem or Platform, that is a different Campaign: name `/gtm-playbook:plan-campaign`. Do not draft the landing page or the warm outbound: they are separate Artifacts.
@@ -64,7 +66,7 @@ If the Founder says to write now, the angles can never be left open.
 
 Show the Founder the posts you are about to write, each checked against the tests above and naming the Proven post it adapts, if any, in a message that asks nothing else. Write only once they confirm that draft, or straight away if they told you to write without confirming. An answer to an Interview question is never a confirmation.
 
-Check again that the Campaign is still `planned` and holds no `social-posts.md`. Create `gtm/campaigns/<slug>/social-posts.md` in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives. Write nothing else: not the Profile, not `campaign.md`, not any other Artifact.
+Check again that the Campaign can still take the posts. Create `gtm/campaigns/<slug>/social-posts.md`, or for more posts append to it, in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives. Write nothing else: not the Profile, not `campaign.md`, not any other Artifact.
 
 ### 5. Done
 

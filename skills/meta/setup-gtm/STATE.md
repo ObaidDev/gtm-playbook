@@ -198,7 +198,7 @@ Exactly one Lead magnet is always listed. Any other line under **Artifacts neede
 
 ## Artifacts
 
-Every demand Artifact belongs to exactly one Campaign (ADR-0003) and is one Markdown file in that Campaign's folder, named after its type, such as `gtm/campaigns/<slug>/lead-magnet.md`. The skill that writes an Artifact owns it; every other skill only reads it. Each Artifact's format below says which Campaign states its skill writes into. An Artifact skill never overwrites or edits an existing Artifact.
+Every demand Artifact belongs to exactly one Campaign (ADR-0003) and is one Markdown file in that Campaign's folder, named after its type, such as `gtm/campaigns/<slug>/lead-magnet.md`. The skill that writes an Artifact owns it; every other skill only reads it. Each Artifact's format below says which Campaign states its skill writes into. An Artifact skill never overwrites or edits an existing Artifact, except that `social-post` appends posts to its `social-posts.md`.
 
 ### Header
 
@@ -244,7 +244,7 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 
 ### Social posts
 
-`social-post` writes `social-posts.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign that already has its Lead magnet, once per Campaign.
+`social-post` writes `social-posts.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is first written into a `planned` Campaign that already has its Lead magnet. A later run, while the Campaign is `planned` or `live`, appends more posts under an `## Added <today>` heading, numbered on from the last post, and changes nothing above it.
 
 ```markdown
 # Social posts: <the Lead magnet's title>
@@ -261,7 +261,7 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 <the post text, ending with a line that sends the reader to the Link to download the Lead magnet>
 ```
 
-There is one `## Post` heading per post the Campaign's Social posts line asks for. Every post ends with the Link and never asks the reader to comment to get the Lead magnet. The posts are never `(unconfirmed)` and never Open questions: a file without them is not written.
+The first write holds one `## Post` heading per post the Campaign's Social posts line asks for; that number is the first batch, not a cap. Every post ends with the Link and never asks the reader to comment to get the Lead magnet. The posts are never `(unconfirmed)` and never Open questions: a file without them is not written.
 
 ### Landing page
 
