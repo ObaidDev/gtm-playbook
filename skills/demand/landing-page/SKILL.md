@@ -25,9 +25,9 @@ Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](..
 
 Then read every `campaign.md` under `gtm/campaigns/` and check, in this order:
 
-- If no Campaign is `planned` or `live`, tell the Founder to run `/gtm-playbook:plan-campaign` first.
-- If the Campaign has no `lead-magnet.md`, tell the Founder to run `/gtm-playbook:lead-magnet` first. The page exists to give it away.
-- If the Campaign already has a `landing-page.md`, refuse, unless the Campaign is `live` and its Lead magnet's `Written:` date is later than the page's: then rewrite the page to follow the Lead magnet. A Campaign has one landing page.
+- If no Campaign is `planned`, tell the Founder to run `/gtm-playbook:plan-campaign` first.
+- If the planned Campaign has no `lead-magnet.md`, tell the Founder to run `/gtm-playbook:lead-magnet` first. The page exists to give it away.
+- If the Campaign already has a `landing-page.md`, refuse: a Campaign has one landing page, and it is never overwritten.
 - If its **Artifacts needed** has no Landing page line, refuse: the Founder planned this Campaign without one.
 
 If more than one Campaign can take a landing page and the Founder did not name one, ask which first.
@@ -40,13 +40,13 @@ Build the page from what is already decided; decide nothing new:
 - The **Copy** comes from `lead-magnet.md`: the headline is its title, the subhead its **Problem**, and the button and thank-you line name its **Form** (checklist or guide).
 - The Lead stage question and every answer, each marked ICP lead or Not ICP, come from the ICP's **Lead stage** line.
 
-Copy each with its `(unconfirmed)` marker. If the Founder wants a different question or different answers, that is the ICP's decision: name `/gtm-playbook:define-icp` and change nothing here. If they want a different title or Form, that is the Lead magnet's decision: name `/gtm-playbook:lead-magnet` and change nothing here. A different Problem is a new Campaign: name `/gtm-playbook:plan-campaign`.
+Copy each with its `(unconfirmed)` marker. If the Founder wants a different question or different answers, that is the ICP's decision: name `/gtm-playbook:define-icp` and change nothing here. If they want a different title, Problem, or Form, the Lead magnet is never rewritten: that is a new Campaign, so name `/gtm-playbook:plan-campaign` and change nothing here.
 
 ### 3. Confirm, then write
 
 Show the Founder the landing page you are about to write, in a message that asks nothing else, and write only once they confirm it (or straight away if they said to write without confirming).
 
-Check again that the Campaign is still `planned` and its folder holds no `landing-page.md`, or, for a rewrite, still `live`. Create `gtm/campaigns/<slug>/landing-page.md` in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives. Write nothing else.
+Check again that the Campaign is still `planned` and its folder holds no `landing-page.md`. Create `gtm/campaigns/<slug>/landing-page.md` in the format [STATE.md](../../meta/setup-gtm/STATE.md) gives. Write nothing else.
 
 ### 4. Done
 

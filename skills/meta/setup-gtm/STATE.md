@@ -198,7 +198,7 @@ Exactly one Lead magnet is always listed. Any other line under **Artifacts neede
 
 ## Artifacts
 
-Every demand Artifact belongs to exactly one Campaign (ADR-0003) and is one Markdown file in that Campaign's folder, named after its type, such as `gtm/campaigns/<slug>/lead-magnet.md`. The skill that writes an Artifact owns it; every other skill only reads it. Each Artifact's format below says which Campaign states its skill writes into. An Artifact skill never overwrites or edits an existing Artifact, except that `social-post` appends posts to its `social-posts.md`, and `lead-magnet` and `landing-page` rewrite theirs in a `live` Campaign as their formats below say.
+Every demand Artifact belongs to exactly one Campaign (ADR-0003) and is one Markdown file in that Campaign's folder, named after its type, such as `gtm/campaigns/<slug>/lead-magnet.md`. The skill that writes an Artifact owns it; every other skill only reads it. Each Artifact's format below says which Campaign states its skill writes into. An Artifact skill never overwrites or edits an existing Artifact, except that `social-post` appends posts to its `social-posts.md`.
 
 ### Header
 
@@ -219,7 +219,7 @@ Any field below the header may be left open the way a Profile field is (see Open
 
 ### Lead magnet
 
-`lead-magnet` writes `lead-magnet.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is first written into a `planned` Campaign, and a Campaign has exactly one Lead magnet. While the Campaign is `live`, a later run may rewrite it on the same Problem and Point of view, changing its title, Form, or Outline, with `Written:` set to the day of the rewrite.
+`lead-magnet` writes `lead-magnet.md`, built from the ICP and the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign, and a Campaign has exactly one Lead magnet.
 
 ```markdown
 # Lead magnet: <the title the ICP sees>
@@ -240,7 +240,7 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 1. <item or section title>: <what it teaches, in one or two sentences>
 ```
 
-**Form**, **Problem**, and **Point of view** are copied from the Campaign, `(unconfirmed)` marker included, except that a rewrite may change the Form. **Outline** is never `(unconfirmed)` and never an Open question: a Lead magnet without it is not written.
+**Form**, **Problem**, and **Point of view** are copied from the Campaign, `(unconfirmed)` marker included. **Outline** is never `(unconfirmed)` and never an Open question: a Lead magnet without it is not written.
 
 ### Social posts
 
@@ -265,7 +265,7 @@ The first write holds one `## Post` heading per post the Campaign's Social posts
 
 ### Landing page
 
-`landing-page` writes `landing-page.md`, built from the ICP and, through the Lead magnet, the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is first written into a `planned` Campaign that already has its Lead magnet, once per Campaign. While the Campaign is `live`, a later run rewrites it only when the Lead magnet's `Written:` date is later than its own, with `Written:` set to the day of the rewrite.
+`landing-page` writes `landing-page.md`, built from the ICP and, through the Lead magnet, the Value proposition, so its `Profile date` is the later of their `Last revised` dates. It is written only into a `planned` Campaign that already has its Lead magnet, once per Campaign.
 
 ```markdown
 # Landing page: <the Lead magnet's title>
