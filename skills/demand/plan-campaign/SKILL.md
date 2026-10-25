@@ -1,6 +1,6 @@
 ---
 name: plan-campaign
-description: "Open a Campaign: reads your ICP and Value proposition, interviews you about the one hypothesis to test, the Target signal and judge-by date that will decide it, and the Artifacts it needs, then creates the Campaign's folder in the planned state. Run after value-prop, and again for every new hypothesis."
+description: "Open a Campaign: reads your ICP and Value proposition, researches your ICP's problem, interviews you about the one hypothesis to test, the Target signal and judge-by date that will decide it, and the Artifacts it needs, then creates the Campaign's folder in the planned state. Run after value-prop, and again for every new hypothesis."
 disable-model-invocation: true
 ---
 
@@ -22,6 +22,15 @@ Hold every Campaign to these tests:
 - **Scale with paid.** **Scale if** is counted the same way as the Target signal and sits above it. Hitting it means the posts that work organically are worth promoting with paid.
 - **Committed before publishing.** The Target signal, Scale if, and the dates are set now, and missing the Target signal means the hypothesis is killed. The test window runs from the publish-by date, which leaves time to write the Artifacts, to the judge-by date. A Campaign without them cannot be judged, so it is not written.
 - **Every Artifact that promotes the Lead magnet.** Social posts on the ICP's Platform, a landing page that asks for name, email, and the Lead stage question, and warm outbound to the ICP leads it brings in. Drop one only when the Founder says why.
+
+## Start from what works
+
+The Hypothesis's problem and the Lead magnet's Problem and Point of view are what every Artifact of the Campaign rests on, so never settle them from a blank page. Check them against what the ICP already says and already gets, before the Campaign is committed:
+
+- **The ICP's own questions and complaints** about the problem, in open communities on their Platform. They show which part of the problem is urgent.
+- **Reviews of the alternatives** the ICP already uses for the problem. They show, in the buyer's words, what those alternatives get wrong: that is where a distinct Point of view comes from.
+- **Proven lead magnets** already offered on the problem. A Point of view that says what they already say is not distinct.
+- **Checked facts.** The Point of view holds up against the sources that own its facts; a Campaign does not test a claim that is simply false.
 
 ## Process
 
@@ -45,9 +54,13 @@ Finding facts is your job, never the Founder's.
 - Read whatever else describes the product and its buyers: a `README.md`, a landing page, docs.
 - Note any answers the Founder already gave in the message that invoked this skill.
 
+Then call the Skill tool with `gtm-playbook:research`, every time, on the four things above, for the ICP's problem as the Profile states it, scoped to the Early adopters and their Platform, and for any problem the Founder already named. Tell it the primary source is the post, the review, or the checklist or guide itself, never an article that rounds them up, and for facts, the source that owns them. Tell the Founder you are researching, and wait for the findings before the Interview: the Hypothesis comes first, and everything else is sized against it.
+
 ### 3. Interview
 
-Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the Campaign's Hypothesis (which slice of the ICP, starting from its Early adopters, and which part of their problem), its Lead magnet (form, problem, and point of view: only its topic, since the Lead magnet itself is a separate Artifact), Target signal, Scale if, Dates, Artifacts needed, and any `(unconfirmed)` Profile field it builds on (what its Customer conversations should find out), held to the tests above.
+Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the Campaign's Hypothesis (which slice of the ICP, starting from its Early adopters, and which part of their problem), its Lead magnet (form, problem, and point of view: only its topic, since the Lead magnet itself is a separate Artifact), Target signal, Scale if, Dates, Artifacts needed, and any `(unconfirmed)` Profile field it builds on (what its Customer conversations should find out), held to the tests above, with the Hypothesis's problem and the Lead magnet's Problem and Point of view built from the research findings.
+
+If the findings show the problem the Founder prefers draws little from the ICP, or its Point of view is what the Proven lead magnets already say, tell the Founder in the first round, with the evidence, and recommend a problem or Point of view the findings support. Never change it yourself: the Founder decides. If the research finds little on the problem, say so and build from the Profile and the conversations. Never ask the Founder for examples, though use any they offer.
 
 Do not ask about the ICP, the Value proposition, positioning, or pricing: the skills that own those Profile sections do that. A slice outside the Profile's ICP is that skill's decision: name `/gtm-playbook:define-icp`. If the Founder says to write now, Hypothesis, Target signal, and Dates can never be left open; record every other open field as an Open question, as [STATE.md](../../meta/setup-gtm/STATE.md) describes.
 
