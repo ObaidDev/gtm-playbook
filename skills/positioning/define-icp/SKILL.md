@@ -41,7 +41,7 @@ Read `gtm/profile.md`. If it does not exist, follow the missing-prerequisite rul
 Finding facts is your job, never the Founder's.
 
 - Read the whole Profile. The Product section says what the product does, its Product stage, and its Sales motion; the current ICP section, if filled in, is what this run revises. Note any `(unconfirmed)` field you build on (see [STATE.md](../../meta/setup-gtm/STATE.md)).
-- Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: who confirmed the problem, who did not, and the words they used. When revising, note the ones dated after the ICP's `Last revised` date, and point out where they confirm or contradict the current ICP.
+- Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: who confirmed the problem, who did not, and the words they used. When revising, note the ones dated after the ICP's `Last revised` date and any whose **Contradicts the Profile** names the ICP, and point out where they confirm or contradict the current ICP.
 - Read whatever else describes the product and its buyers: a `README.md`, a landing page, docs.
 - Note any answers the Founder already gave in the message that invoked this skill.
 

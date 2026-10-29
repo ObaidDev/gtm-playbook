@@ -43,7 +43,7 @@ Run the Interview: call the Skill tool with `gtm-playbook:interview`, on the con
 
 The Interview also settles **Contradicts the Profile**: recommend each contradiction you found between the conversation and the ICP or the Value proposition, with the evidence, and say when the conversation answers an `(unconfirmed)` field instead. A conversation the Founder has not had yet is not recorded: ask them to come back after it.
 
-Do not ask how to change the ICP or the Value proposition: `/gtm-playbook:define-icp` and `/gtm-playbook:value-prop` own them, and decide that when the Founder runs them. If the Founder says to write now, record what was not discussed as `Not discussed.`, as [STATE.md](../../meta/setup-gtm/STATE.md) describes.
+Do not ask how to change the ICP or the Value proposition: `/gtm-playbook:define-icp` and `/gtm-playbook:value-prop` own them, and decide that when the Founder runs them. If the Founder says to write now, record what was not discussed the way [STATE.md](../../meta/setup-gtm/STATE.md) describes.
 
 ### 4. Confirm, then write
 

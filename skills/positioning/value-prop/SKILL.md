@@ -37,7 +37,7 @@ Read `gtm/profile.md`, and follow the missing-prerequisite rule in [STATE.md](..
 Finding facts is your job, never the Founder's.
 
 - Read the whole Profile. The ICP section says who has the problem and what it is; the Product section says what the product does; the current Value proposition, if filled in, is what this run revises. Note whether the ICP's `Last revised` date is later than the Value proposition's: if so, the claim was written for an older ICP. Note any `(unconfirmed)` field you build on (see [STATE.md](../../meta/setup-gtm/STATE.md)).
-- Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: which alternatives prospects named, whether the claim landed, and the words they used. When revising, note the ones dated after the Value proposition's `Last revised` date.
+- Read every file in `gtm/conversations/` if that folder exists. These Customer conversations are evidence: which alternatives prospects named, whether the claim landed, and the words they used. When revising, note the ones dated after the Value proposition's `Last revised` date and any whose **Contradicts the Profile** names the Value proposition.
 - Read whatever else describes the product and its competitors: a `README.md`, a landing page, docs.
 - Note any answers the Founder already gave in the message that invoked this skill.
 

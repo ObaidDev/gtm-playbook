@@ -299,7 +299,7 @@ Everything below the header is copied from the Lead magnet and the ICP, `(unconf
 
 ## Customer conversations
 
-`log-conversation` writes each Customer conversation to its own file in `gtm/conversations/`, named `<YYYY-MM-DD>-<who>.md`: the day the conversation took place, then who it was with, in lowercase words joined by hyphens. When that name is taken, it adds `-2`, `-3`, and so on. It never edits or overwrites an existing conversation file. Every other skill only reads them, as evidence for revising the Profile.
+`log-conversation` writes each Customer conversation to its own file in `gtm/conversations/`, named `<YYYY-MM-DD>-<who>.md`: the day the conversation took place, then who it was with, the name in its title, in lowercase words joined by hyphens. When that name is taken, it adds `-2`, `-3`, and so on. It never edits or overwrites an existing conversation file. Every other skill only reads them, as evidence for revising the Profile.
 
 ```markdown
 # Customer conversation: <who, as the Founder names them>
@@ -324,9 +324,9 @@ Campaign: <the slug of the Campaign it came from, or `None.`>
 
 **Their words:**
 
-- "<what they said, word for word as the Founder gives it>", or `None.`
+- "<what they said, word for word as the Founder gives it>"
 
 **Contradicts the Profile:** <`Nothing.`, or for each contradicted section (the ICP or the Value proposition): what in this conversation contradicts it, and the skill that owns it>
 ```
 
-A conversation file records what happened, so it has no `(unconfirmed)` fields and no Open questions list: what was not discussed is recorded as `Not discussed.`, and a quote the Founder does not have is left out, never invented. **Campaign** may be `None.`: an unlinked conversation is still evidence for the Profile.
+A conversation file records what happened, so it has no `(unconfirmed)` fields and no Open questions list: a field that was not discussed holds `Not discussed.` (or `not discussed` and `not tested`, the values **Problem** and **Value proposition** list), and a quote the Founder does not have is left out, never invented: **Their words** with no quote holds `None.` **Campaign** may be `None.`: an unlinked conversation is still evidence for the Profile.
