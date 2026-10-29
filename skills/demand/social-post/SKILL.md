@@ -17,6 +17,7 @@ The goal of a post is not to sell the product: it is to bring the ICP into as ma
 Hold every post to these tests:
 
 - **Problem first.** It teaches the ICP something about the urgent and important problem the Lead magnet solves, and says why the product is ten times better at it, in the words of the Value proposition. It does not try to sell the product.
+- **Zero context.** It assumes the reader knows nothing about the topic: it opens by saying what the post is about and what the reader will get from it, and introduces every person, tool, or term before it uses it.
 - **Ends with a link.** Its last line sends the reader to the landing page to download the Lead magnet.
 - **No comment-below call to action.** Never "comment below for the guide". The people who comment for something free are rarely buyers. Buyers with budget lurk: they do not comment in public, but they follow a link.
 
