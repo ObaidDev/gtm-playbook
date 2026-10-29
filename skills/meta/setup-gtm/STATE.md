@@ -330,3 +330,31 @@ Campaign: <the slug of the Campaign it came from, or `None.`>
 ```
 
 A conversation file records what happened, so it has no `(unconfirmed)` fields and no Open questions list: a field that was not discussed holds `Not discussed.` (or `not discussed` and `not tested`, the values **Problem** and **Value proposition** list), and a quote the Founder does not have is left out, never invented: **Their words** with no quote holds `None.` **Campaign** may be `None.`: an unlinked conversation is still evidence for the Profile.
+
+## Experiment log
+
+`log-experiment` owns `gtm/experiment-log.md`, creating it with its first entry. Each entry is one trial inside a Campaign: a post, a paid boost, an outbound batch. A new entry is appended at the end of the file, and no entry is ever edited or removed. Every other skill only reads it.
+
+```markdown
+# Experiment log
+
+Owner: log-experiment
+
+## <YYYY-MM-DD>: <what was tried, in a few words>
+
+Campaign: <the Campaign's slug>
+
+**Tried:** <what the Founder did, and where>
+
+**Artifact:** <the Artifact file in the Campaign's folder and the part of it used, such as `social-posts.md`, Post 2, or `None.` and what was used instead>
+
+**Signal:** <the numbers the Founder counted, in the terms of the Campaign's Target signal>
+
+**Decision:** <what the Founder decided to do because of this signal, or `None yet.`>
+
+**Customer conversations:**
+
+- [<who>](conversations/<YYYY-MM-DD>-<who>.md)
+```
+
+The date in an entry's heading is the day the trial started. Entries stay in the order they were logged. Every entry has a Campaign that was `planned` or `live` when it was logged; the first entry for a `planned` Campaign also changes that Campaign's `State:` line to `live` (see Campaigns above). An entry records what happened, so it has no `(unconfirmed)` fields and no Open questions list: the Date, **Tried**, **Artifact**, and **Signal** are never left open, a **Decision** not yet made holds `None yet.`, and **Customer conversations** with none to link holds `None.`
