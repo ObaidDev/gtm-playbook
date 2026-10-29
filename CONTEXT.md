@@ -49,7 +49,7 @@ The judgment closing a Campaign: kept (keep running), killed (hypothesis false),
 _Avoid_: result, outcome, status
 
 **Experiment log**:
-The running record of trials inside Campaigns (a post, a paid boost, an outbound batch), each with its signal.
+The running record of trials inside Campaigns (a post, a paid boost, an outbound batch), each with its signal, the decision it led to, and the **Customer conversations** it brought in. The first entry for a planned Campaign makes it live.
 _Avoid_: journal, results, tracker
 
 **Customer conversation**:
