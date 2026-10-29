@@ -296,3 +296,37 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 ```
 
 Everything below the header is copied from the Lead magnet and the ICP, `(unconfirmed)` markers included. The landing page decides nothing of its own, so it has no Open questions list. **Fields** are what the page's form asks for; the Lead magnet's **Form** is whether it is a checklist or a guide.
+
+## Customer conversations
+
+`log-conversation` writes each Customer conversation to its own file in `gtm/conversations/`, named `<YYYY-MM-DD>-<who>.md`: the day the conversation took place, then who it was with, in lowercase words joined by hyphens. When that name is taken, it adds `-2`, `-3`, and so on. It never edits or overwrites an existing conversation file. Every other skill only reads them, as evidence for revising the Profile.
+
+```markdown
+# Customer conversation: <who, as the Founder names them>
+
+Owner: log-conversation
+Date: <YYYY-MM-DD, the day the conversation took place>
+Campaign: <the slug of the Campaign it came from, or `None.`>
+
+**Who:** <their role and company>
+
+**Lead stage:** <their answer to the ICP's Lead stage question, and whether it marks an ICP lead or Not ICP, or `Not asked.`>
+
+**Problem:** <confirmed | not confirmed | not discussed>: <what they said about the ICP's problem, and whether it is urgent and important for them>
+
+**Value proposition:** <resonated | did not resonate | not tested>: <what they said about the claim and the alternatives they use today>
+
+**Budget:** <what they said about budget, or `Not discussed.`>
+
+**Objections:**
+
+- <an objection they raised, or `None.`>
+
+**Their words:**
+
+- "<what they said, word for word as the Founder gives it>", or `None.`
+
+**Contradicts the Profile:** <`Nothing.`, or for each contradicted section (the ICP or the Value proposition): what in this conversation contradicts it, and the skill that owns it>
+```
+
+A conversation file records what happened, so it has no `(unconfirmed)` fields and no Open questions list: what was not discussed is recorded as `Not discussed.`, and a quote the Founder does not have is left out, never invented. **Campaign** may be `None.`: an unlinked conversation is still evidence for the Profile.

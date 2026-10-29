@@ -26,6 +26,7 @@
     "./skills/demand/plan-campaign",
     "./skills/demand/lead-magnet",
     "./skills/demand/social-post",
-    "./skills/demand/landing-page"
+    "./skills/demand/landing-page",
+    "./skills/demand/log-conversation"
   ]
 }
