@@ -2,7 +2,7 @@
 
 Stateful go-to-market skills for Claude Code, distilled from material I have learned from. Instead of generic advice, the skills keep your GTM work in your Workspace (a Profile, Campaigns, Customer conversations, an Experiment log) and build on it every time you run them.
 
-> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, `outcome-pricing`, `plan-campaign`, `lead-magnet`, `social-post`, `landing-page`, `log-conversation`, and `log-experiment` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
+> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, `outcome-pricing`, `plan-campaign`, `lead-magnet`, `social-post`, `landing-page`, `log-conversation`, `log-experiment`, and `gtm-retro` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
 
 ## Install
 
@@ -19,7 +19,7 @@ On older versions, add the marketplace first, then install:
 /plugin install gtm-playbook@obaiddev
 ```
 
-Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. When you are ready to test a hypothesis, run `/gtm-playbook:plan-campaign`, then `/gtm-playbook:lead-magnet`, `/gtm-playbook:social-post`, and `/gtm-playbook:landing-page`. After every conversation with a prospect, run `/gtm-playbook:log-conversation`, and after every trial (a post, a boost, an outbound batch), `/gtm-playbook:log-experiment`. All state is kept in a `gtm/` folder there.
+Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. When you are ready to test a hypothesis, run `/gtm-playbook:plan-campaign`, then `/gtm-playbook:lead-magnet`, `/gtm-playbook:social-post`, and `/gtm-playbook:landing-page`. After every conversation with a prospect, run `/gtm-playbook:log-conversation`, and after every trial (a post, a boost, an outbound batch), `/gtm-playbook:log-experiment`. On a Campaign's judge-by date, run `/gtm-playbook:gtm-retro` to record its Verdict. All state is kept in a `gtm/` folder there.
 
 ## Flows
 
@@ -55,7 +55,7 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
       │                       log-experiment · log-conversation
       │                                            ↓
       └──────────────────────────────────── gtm-retro
-                                                   ├─ kept   → keep running
+                                                   ├─ kept   → test it further in a new Campaign
                                                    ├─ scaled → scale-with-paid
                                                    └─ killed → back to the positioning flow
 ```
@@ -70,7 +70,7 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
 | 4 | `gtm-review` ([#18](https://github.com/ObaidDev/gtm-playbook/issues/18)) | Checks the Campaign's Artifacts before you publish |
 | 5 | [`log-experiment`](./skills/demand/log-experiment/SKILL.md) | Records each trial (a post, a boost, an outbound batch), its signal, and what you decided; the first one makes the Campaign live |
 | 5 | [`log-conversation`](./skills/demand/log-conversation/SKILL.md) | Records each Customer conversation, optionally linked to the Campaign, and flags where it contradicts your ICP or Value proposition |
-| 6 | `gtm-retro` ([#19](https://github.com/ObaidDev/gtm-playbook/issues/19)) | Judges the Campaign against its Target signal: kept, killed, or scaled |
+| 6 | [`gtm-retro`](./skills/meta/gtm-retro/SKILL.md) | Judges the Campaign against its Target signal: kept, killed, or scaled, and names the positioning skill to revise when its conversations point at your ICP or Value proposition |
 | 7 | `scale-with-paid` ([#11](https://github.com/ObaidDev/gtm-playbook/issues/11)) | Promotes proven posts and retargets leads, for scaled Campaigns |
 
 ### Lost? Ask the router

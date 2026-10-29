@@ -7,6 +7,7 @@ Skills that set up, route, and grow the playbook rather than doing GTM work them
 Reachable only when you type them (`disable-model-invocation: true`).
 
 - **[setup-gtm](./setup-gtm/SKILL.md)**: Create or update your Profile with your product, Product stage, and Sales motion, plus an empty section for every skill that fills one in later. Run once per Workspace.
+- **[gtm-retro](./gtm-retro/SKILL.md)**: Judge a live Campaign on its judge-by date against its Target signal, from the signal you counted and the Customer conversations it brought in, and record its Verdict (kept, killed, or scaled), naming the positioning skill to revise when its evidence points at your ICP or Value proposition. Run once per Campaign.
 
 ## Model-invoked
 

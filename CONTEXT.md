@@ -45,7 +45,7 @@ The measurable result a Campaign commits to when planned, with a judge-by date (
 _Avoid_: goal, KPI, success metric
 
 **Verdict**:
-The judgment closing a Campaign: kept (keep running), killed (hypothesis false), or scaled (promote with paid).
+The judgment closing a Campaign: kept (hypothesis held, short of Scale if; test it further in a new Campaign), killed (hypothesis false), or scaled (promote with paid).
 _Avoid_: result, outcome, status
 
 **Experiment log**:

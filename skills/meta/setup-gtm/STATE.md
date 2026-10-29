@@ -160,6 +160,8 @@ A Campaign moves through planned, live, and judged, in that order. Each transiti
 
 `plan-campaign` writes the definition once and never edits an existing Campaign. A new hypothesis is a new Campaign.
 
+A judged Campaign is closed, whatever its Verdict: it takes no more Experiment log entries or Artifacts, and is never judged again. Testing a kept hypothesis further is a new Campaign.
+
 ### Definition
 
 `plan-campaign` creates `campaign.md` in this format. Replace `<today>` with today's date.
@@ -195,6 +197,27 @@ Profile date: <the later of the ICP's and the Value proposition's Last revised d
 Exactly one Lead magnet is always listed. Any other line under **Artifacts needed** may be dropped when the Founder decided the Campaign does without it.
 
 **Hypothesis**, **Target signal**, **Publish by**, and **Judge by** are never `(unconfirmed)` and never Open questions: a Campaign without all four is not written. On the judge-by date, a Campaign that misses its Target signal is killed, one that meets it but falls short of **Scale if** is kept, and one that meets **Scale if** is scaled. Any other field may be left open the way a Profile field is (see Open questions above), with the Open questions list at the end of `campaign.md`.
+
+### Verdict
+
+`gtm-retro` judges a `live` Campaign: it changes the line `State: live` to `State: judged` and appends this section at the end of `campaign.md`, after any Open questions list, changing nothing else in the file. Replace `<today>` with today's date.
+
+```markdown
+## Verdict
+
+Owner: gtm-retro
+Judged: <today>
+
+**Verdict:** <kept | killed | scaled>
+
+**Signal:** <each number in the Target signal and Scale if, beside the total the Founder counted for it>
+
+**Customer conversations:** <how many Customer conversations link to the Campaign, and what they found about its Hypothesis: whether the problem was confirmed, how the Value proposition landed, the objections>
+
+**Revise:** <`Nothing.`, or for each Profile section to revisit (the ICP or the Value proposition the conversations contradict, or an `(unconfirmed)` field they answered): the evidence, and the skill that owns it>
+```
+
+The Verdict follows the rule in Definition above, from the totals in **Signal**. Each total is what the Founder counted for the whole Campaign, never a sum of Experiment log entries, which can count the same lead twice. A Verdict records what happened, so it has no `(unconfirmed)` fields and no Open questions list: a Verdict without every field is not written.
 
 ## Artifacts
 
