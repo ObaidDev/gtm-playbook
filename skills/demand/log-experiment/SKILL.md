@@ -55,4 +55,4 @@ Check again that the Campaign is `planned` or `live`. Append the entry to `gtm/e
 
 ### 5. Done
 
-Tell the Founder the entry is logged, and, if it was the first, that the Campaign is now live. Show each of the Campaign's entries with its Signal, as the Founder counted it, beside the Campaign's Target signal and Scale if, and name its judge-by date. Never add signals up yourself: two trials can count the same lead. If the trial brought in a Customer conversation that is not recorded yet, name `/gtm-playbook:log-conversation`.
+Tell the Founder the entry is logged, and, if it was the first, that the Campaign is now live. Show each of the Campaign's entries with its Signal, as the Founder counted it, beside the Campaign's Target signal and Scale if, and name its judge-by date, when `/gtm-playbook:gtm-retro` judges it. Never add signals up yourself: two trials can count the same lead. If the trial brought in a Customer conversation that is not recorded yet, name `/gtm-playbook:log-conversation`.
