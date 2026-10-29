@@ -2,7 +2,7 @@
 
 Stateful go-to-market skills for Claude Code, distilled from material I have learned from. Instead of generic advice, the skills keep your GTM work in your Workspace (a Profile, Campaigns, Customer conversations, an Experiment log) and build on it every time you run them.
 
-> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, `outcome-pricing`, `plan-campaign`, `lead-magnet`, `social-post`, and `landing-page` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
+> **Status:** early. `setup-gtm`, `define-icp`, `value-prop`, `outcome-positioning`, `outcome-pricing`, `plan-campaign`, `lead-magnet`, `social-post`, `landing-page`, and `log-conversation` ship today; the other skills below are planned, and each links to its ticket. Vocabulary is defined in [CONTEXT.md](./CONTEXT.md).
 
 ## Install
 
@@ -19,7 +19,7 @@ On older versions, add the marketplace first, then install:
 /plugin install gtm-playbook@obaiddev
 ```
 
-Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. When you are ready to test a hypothesis, run `/gtm-playbook:plan-campaign`, then `/gtm-playbook:lead-magnet`, `/gtm-playbook:social-post`, and `/gtm-playbook:landing-page`. All state is kept in a `gtm/` folder there.
+Then open the folder you want to use as your Workspace (one per product), run `/gtm-playbook:setup-gtm`, then `/gtm-playbook:define-icp`, `/gtm-playbook:value-prop`, `/gtm-playbook:outcome-positioning`, and `/gtm-playbook:outcome-pricing`. When you are ready to test a hypothesis, run `/gtm-playbook:plan-campaign`, then `/gtm-playbook:lead-magnet`, `/gtm-playbook:social-post`, and `/gtm-playbook:landing-page`. After every conversation with a prospect, run `/gtm-playbook:log-conversation`. All state is kept in a `gtm/` folder there.
 
 ## Flows
 
@@ -69,7 +69,7 @@ plan-campaign → lead-magnet → social-post · landing-page · warm-outbound
 | 3 | `warm-outbound` ([#8](https://github.com/ObaidDev/gtm-playbook/issues/8)) | Messages to people who took the Lead magnet |
 | 4 | `gtm-review` ([#18](https://github.com/ObaidDev/gtm-playbook/issues/18)) | Checks the Campaign's Artifacts before you publish |
 | 5 | `log-experiment` ([#10](https://github.com/ObaidDev/gtm-playbook/issues/10)) | Records each trial (a post, a boost, an outbound batch) and its signal |
-| 5 | `log-conversation` ([#9](https://github.com/ObaidDev/gtm-playbook/issues/9)) | Records each Customer conversation, optionally linked to the Campaign |
+| 5 | [`log-conversation`](./skills/demand/log-conversation/SKILL.md) | Records each Customer conversation, optionally linked to the Campaign, and flags where it contradicts your ICP or Value proposition |
 | 6 | `gtm-retro` ([#19](https://github.com/ObaidDev/gtm-playbook/issues/19)) | Judges the Campaign against its Target signal: kept, killed, or scaled |
 | 7 | `scale-with-paid` ([#11](https://github.com/ObaidDev/gtm-playbook/issues/11)) | Promotes proven posts and retargets leads, for scaled Campaigns |
 
